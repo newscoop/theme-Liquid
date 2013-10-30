@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<theme name="Taraf" designer="Sourcefabric" version="1.0" require="4.0">
+    <description>Theme for Newscoop Version 4</description>
+
+    <presentation-img src="themethumbs/front.jpg" name="Front page"/>
+    <presentation-img src="themethumbs/section.jpg" name="Section page"/>
+    <presentation-img src="themethumbs/article.jpg" name="Article"/>
+
+    <!-- =============================== -->
+
+	<output name="Web">
+		<frontPage src="front.tpl"/>
+		<sectionPage src="section.tpl"/>
+		<articlePage src="article.tpl"/>
+		<errorPage src="404.tpl"/>
+	</output>
+	<renditions>
+			<rendition name="section" width="230" height="155" specs="crop"/>
+
+            <rendition name="article" width="620" height="415" specs="crop"/>
+
+
+            <rendition name="front_small" width="220" height="150" specs="crop"/>
+            <rendition name="front_medium" width="380" height="255" specs="crop"/>
+
+            <rendition name="front_big" width="460" height="310" specs="crop"/>
+
+
+            <rendition name="slideshow" width="160" height="107" specs="crop"/>
+
+            <rendition name="dossier" width="395" height="265" specs="crop"/>
+
+            <rendition name="pdf" width="260" height="380" specs="crop"/>
+
+	</renditions>
+</theme>
+

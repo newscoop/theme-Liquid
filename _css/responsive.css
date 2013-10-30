@@ -1,0 +1,114 @@
+/*
+@media (max-width: 767px) {
+	.news_item .thumbnail {
+		display: inline-block;
+	}
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.orange_box .people .span3 {
+		width: 160px !important;
+	}
+
+	.blue_box.blue_box_posts .span3 {
+		width: 156px !important;
+	}
+
+	.article_content .span8 .article_side_element.align_left {
+		left: -124px;
+		margin-right: -114px;
+	}
+
+	.article_content .span8 .article_side_element.align_right {
+		right: -124px;
+		margin-left: -114px;
+	}
+
+	.article_content .span10 .article_side_element.align_left {
+		left: -62px;
+		margin-right: -52px;
+	}
+
+	.article_content .span10 .article_side_element.align_right {
+		right: -62px;
+		margin-left: -52px;
+	}
+
+	.news_item .thumbnail .caption  {
+		right: -120px;
+	}
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+	*/
+	.orange_box .people .span3 {
+		width: 214px !important;
+	}
+
+	.blue_box.blue_box_posts .span3 {
+		width: 210px !important;
+	}
+
+	.article_content .span8 .article_side_element.align_left {
+		left: -160px;
+		margin-right: -150px;
+	}
+
+	.article_content .span8 .article_side_element.align_right {
+		right: -160px;
+		margin-left: -150px;
+	}
+
+	.article_content .span10 .article_side_element.align_left {
+		left: -80px;
+		margin-right: -60px;
+	}
+
+	.article_content .span10 .article_side_element.align_right {
+		right: -80px;
+		margin-left: -60px;
+	}
+
+	.news_item .thumbnail .caption  {
+		right: -150px;
+	}
+	/*
+}
+
+@media (min-width: 1200px) {
+
+	.orange_box .people .span3 {
+		width: 264px !important;
+	}
+
+	.blue_box.blue_box_posts .span3 {
+		width: 260px !important;
+	}
+
+	.article_content .span8 .article_side_element.align_left {
+		left: -200px;
+		margin-right: -190px;
+	}
+
+	.article_content .span8 .article_side_element.align_right {
+		right: -200px;
+		margin-left: -190px;
+	}
+
+	.article_content .span10 .article_side_element.align_left {
+		left: -100px;
+		margin-right: -90px;
+	}
+
+	.article_content .span10 .article_side_element.align_right {
+		right: -100px;
+		margin-left: -90px;
+	}
+
+	.news_item .thumbnail .caption  {
+		right: -180px;
+	}
+
+}
+*/
