@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 
@@ -230,7 +231,7 @@
     {{list_playlist_articles id="1" }}
     {{if $gimme->current_list->index>6}}
 
-  {{if $gimme->article->two_columns}}
+  {{if $gimme->article->highlight}}
   <div class="span6">
       <article class="news_item">
           {{ image rendition="front_big" }}

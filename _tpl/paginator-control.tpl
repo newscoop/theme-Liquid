@@ -1,7 +1,7 @@
 <nav class=" pagination">
     {{if isset($paginator->previous)}}
 
-   <a href="{{ $view->url(['page' => $paginator->previous]) }}" class="arrow arrow_left" title="">Önceki</a>
+   <a href="{{ $view->url(['page' => $paginator->previous]) }}" class="arrow arrow_left" title="">{{#previous#}}</a>
     {{/if}}
 
     <ul>
@@ -16,6 +16,6 @@
     {{if isset($paginator->next)}}
 
 
-    <a href="{{ $view->url(['page' => $paginator->next]) }}" class="arrow arrow_right" title="">Sonraki</a>
+    <a href="{{ $view->url(['page' => $paginator->next]) }}" class="arrow arrow_right" title="">{{#next#}}</a>
     {{/if}}
 </nav>

@@ -11,7 +11,7 @@
 
    {{ if $gimme->current_list->has_previous_elements }}
 
-    <a href="{{ url options="template search.tpl previous_items" }}" class="arrow arrow_left" title="">Önceki
+    <a href="{{ url options="template search.tpl previous_items" }}" class="arrow arrow_left" title="">{{#previous#}}
    </a>
 
 
@@ -44,7 +44,7 @@
      {{ if $gimme->current_list->has_next_elements }}
      {{ unset_article }}
 
-     <a href="{{ uri options="template search.tpl next_items" }}" class="arrow arrow_right" title="">Sonraki</a>
+     <a href="{{ uri options="template search.tpl next_items" }}" class="arrow arrow_right" title="">{{#next#}}</a>
      {{ /if }}
 
 

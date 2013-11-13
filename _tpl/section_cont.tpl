@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 <div class="bloger_news_items">
   <div class="space_left_content">
     <ul>

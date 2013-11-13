@@ -350,13 +350,9 @@
 	border: 1px solid #d2d2d2;
 }
 
-.article_content .article_side_element {
-
-}
-
-
-.related_articles {
-
+.article_content .article_side_element.article_side_attachments{
+	clear:both;
+	margin-top:10px;
 }
 
 .related_articles .red_title {

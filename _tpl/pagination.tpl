@@ -10,7 +10,7 @@
 
  {{ if $gimme->current_list->has_previous_elements }}
 
- <a href="{{ url options="previous_items" }}" class="arrow arrow_left" title="">Önceki
+ <a href="{{ url options="previous_items" }}" class="arrow arrow_left" title="">{{#previous#}}
 </a>
 
 
@@ -66,7 +66,7 @@
 
     {{ if $gimme->current_list->has_next_elements }}
 
-    <a href="{{ url options="next_items" }}" class="arrow arrow_right" title="">Sonraki</a>
+    <a href="{{ url options="next_items" }}" class="arrow arrow_right" title="">{{#next#}}</a>
 
     {{ /if }}
   </nav>

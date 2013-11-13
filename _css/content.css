@@ -158,6 +158,7 @@
 	font-size: 0.8em;
 	padding: 0px 10px;
 	font-family: 'pf_agora_slab_probold';
+	float:right;
 }
 
 .content_text .styled_form .login_menu {

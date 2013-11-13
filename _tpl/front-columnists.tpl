@@ -4,7 +4,7 @@
   <div class="people_wrapper row">
     <!-- People / Row (12) -->
     <ul class="people">
-      {{list_articles length="8" ignore_issue="true" constraints="section is 80" order="byPublishDate desc"}}
+      {{list_articles length="8" ignore_issue="true" constraints="section is 30" order="byPublishDate desc"}}
       <li class="span3">
         <div class="person content_text">
           <header class="header">
