@@ -28,7 +28,7 @@ a, input, textarea{
     color:#005655;
 }
 
-.article_content .info a{
+.article_content .info a, .article_content .topics a{
     color:inherit;
 }
 

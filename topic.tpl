@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 
@@ -16,25 +17,11 @@
   <!-- Content -->
   <section id="content">
 
-    {{ dynamic }}
-    {{ $params = implode(',', array($gimme->url->get_parameter("ls-art0"), $gimme->url->get_parameter("ls-art1"))) }}
-    {{  render file="_tpl/section_economy_cont.tpl" params=$params }}
-    {{ /dynamic }}
 
+{{ render file="_tpl/topic_cont.tpl" params=$gimme->url->get_parameter("ls-art0") }}
 
     </section>
     <!-- End Content -->
-
-
-
-
-
-
-
-
-
-
-
 
 
   </div>

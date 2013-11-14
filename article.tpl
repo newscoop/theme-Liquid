@@ -1,13 +1,15 @@
 {{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ if $gimme->article->type_name=="page"}}
 {{ include file="page.tpl" }}
-{{ elseif $gimme->article->type_name=="Dosyalar"}}
-
-{{ include file="article-dossier.tpl" }}
 
 {{ elseif $gimme->article->type_name=="Columnist"}}
 
 {{ include file="article-columnist.tpl" }}
+
+{{ elseif $gimme->article->type_name == "debate" }}
+
+{{ include file="article-debate.tpl" }}
+
 
 
 {{else}}
@@ -34,7 +36,7 @@
  <!-- Content -->
  <section id="content">
 
-   <div class="row article_content">
+   <article class="row article_content">
      <div class="news_item span8 offset2">
 
 
@@ -74,12 +76,17 @@
         &nbsp;-&nbsp;
         {{/if}}
         {{/list_article_authors}}
-        {{if $gimme->article->source}}
-        {{$gimme->article->source}}&nbsp;-&nbsp;{{/if}}{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
+        {{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
         <h2 class="title">{{$gimme->article->name}}</h2>
+        <h6 class="topics">
+          {{ list_article_topics }}<a href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>{{ if $gimme->current_list->at_end }}</p>{{ else }}, {{ /if }}
+          {{ /list_article_topics }}
+
+        </h6>
         {{ include file="_tpl/_edit-article.tpl" }}
 
 
+        {{ if $gimme->article->content_accessible }}
 
 
         {{ $bodyAr=explode("</p>", $gimme->article->full_text, 2) }}
@@ -96,9 +103,9 @@
        {{ map show_original_map="false" show_reset_link="false" show_locations_list="false" width="240" height="214" }}
      </div>
      {{ /if }}
-
+     {{ if $gimme->article->has_attachments }}
      <div class="span4 article_side_element align_left article_side_attachments">
-      {{ if $gimme->article->has_attachments }}
+
 
       <h3>{{#attachments#}}</h3>
       {{ list_article_attachments }}
@@ -136,9 +143,10 @@
 
           {{ /if }}
           {{ /list_article_attachments }}
+          </div>
       {{ /if }}
 
-     </div>
+
 
 
      {{ list_related_articles }}
@@ -271,10 +279,14 @@
                     </script>
 
                     {{ include file="_tpl/article-comments.tpl" }}
+
+                    {{ else }}
+                                <p>{{ #infoOnLockedArticles# }}</p>
+                    {{ /if }}
                   </div>
 
                 </div>
-              </div>
+              </article>
 
 
               {{ render file="_tpl/box-most_tabs.tpl"  issue=off section=off cache=600 }}

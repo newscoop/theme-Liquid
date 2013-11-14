@@ -209,3 +209,52 @@
 .content_text h3.role a{
 	color: #fabb86;
 }
+
+h3.debate_headline{
+	padding:10px 0px;
+}
+
+.debate_author{
+	background:#e8e8e8;
+	padding:15px ;
+}
+
+.debate_author figure{
+	width:90px;
+	float:left;
+	margin-right:10px;
+}
+
+.article_content .content_text .debate_author .debate_biography{
+
+	font-size:1em;
+	line-height:1.2em;
+
+}
+
+.debatte-score{
+overflow: hidden;
+margin: 0!important;
+list-style-type: none;
+padding: 0;
+}
+
+.debatte-score li{
+	display:inline-block;
+}
+
+.debatte-score li span{
+	padding:10px 20px;
+
+	display:block;
+}
+
+.debatte-score li.yes{
+	background-color: #005655;
+	color: #fabb85;
+}
+
+.debatte-score li.no{
+	background-color: #fabb85;
+	color: #005655;
+}

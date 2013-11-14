@@ -18,7 +18,7 @@
   <section id="content">
 
 
-{{ render file="_tpl/section_cont.tpl" params=$gimme->url->get_parameter("ls-art1") }}
+{{ render file="_tpl/section_cont.tpl" params=$gimme->url->get_parameter("ls-art0") }}
 
     </section>
     <!-- End Content -->

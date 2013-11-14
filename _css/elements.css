@@ -81,6 +81,13 @@
 	line-height: 1em;
 	padding-bottom: 5px;
 }
+.news_item .content .topics {
+	color: #fabb85;
+	padding-top: 0px;
+	text-transform: uppercase;
+	line-height: 1.2em;
+	padding-bottom: 5px;
+}
 
 .news_item .content .title {
 
