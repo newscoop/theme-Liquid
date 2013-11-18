@@ -12,5 +12,5 @@
 
 {{ if !$gimme->debate->is_votable }}
     {{ $smarty.capture.votes }}
-    <small>{{ if $gimme->debate->is_current && !$gimme->user->logged_in }}Current result{{ else }}Final result{{ /if }}</small>
+
 {{ /if }}

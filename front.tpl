@@ -138,8 +138,15 @@
 
 {{if $gimme->current_list->index==4}}
 
-{{ render file="_tpl/front-etraf.tpl"  issue=off section=off cache=4400 }}
+<div class="span4">
 
+{{ render file="_tpl/community-feed.tpl"  issue=off section=off cache=400 }}
+
+
+<a href="#" class="grey_ad"><img src="{{ url static_file='_img/ads/300x250.png' }}" alt="" /></a>
+
+{{ render file="_tpl/front-poll.tpl"  issue=off section=off cache=4400 }}
+</div>
 </div>
 <!-- End Row (12) -->
 
@@ -222,7 +229,7 @@
 <!-- End Row (12) -->
 
 
-{{ render file="_tpl/box-most_tabs.tpl"  issue=off section=off cache=2400 }}
+{{ render file="_tpl/front-columnists.tpl"  issue=off section=off cache=2800}}
 
 <!-- Row (12) -->
 <div class="row" id="masonry_container">
@@ -264,9 +271,9 @@
 <!-- End Row (12) -->
 
 
+{{ render file="_tpl/box-most_tabs.tpl"  issue=off section=off cache=2400 }}
 
 
-{{ render file="_tpl/front-columnists.tpl"  issue=off section=off cache=2800}}
 </section>
 <!-- End Content -->
 

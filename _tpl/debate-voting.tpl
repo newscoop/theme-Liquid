@@ -15,6 +15,7 @@
     <div class="vote-box">
     <div class="button-group">
     {{ if $gimme->debate->is_votable }}
+    {{#Vote#}}
     {{ debate_form template="article.tpl" submit_button=false }}
         {{ list_debate_answers order="bynumber asc" }}
 

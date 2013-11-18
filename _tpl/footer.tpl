@@ -23,7 +23,7 @@
                  {{ list_articles ignore_issue="true" ignore_section="true" order="bySectionOrder asc" constraints="issue is 1 section is 5 type is page"}}
             <li><a href="{{ uri options="article" }}" title="{{ $gimme->article->name }}">{{ $gimme->article->name }}</a></li>
             {{ /list_articles }}
-
+            <li><a href="{{ uri options="template archive.tpl" }}">{{ #archives# }}</a></li>
 
             {{/local}}
         </ul>

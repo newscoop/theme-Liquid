@@ -41,7 +41,9 @@
 
 
   <!-- CSS: implied media="all" -->
-
+  <link rel="stylesheet" href="{{ uri static_file="_js/blueimp-gallery/blueimp-gallery-indicator.css" }}">
+  <link rel="stylesheet" href="{{ uri static_file="_js/blueimp-gallery/blueimp-gallery-video.css" }}">
+  <link rel="stylesheet" href="{{ uri static_file="_js/blueimp-gallery/blueimp-gallery.css" }}">
   <link rel="stylesheet" href="{{ url static_file='_css/style.css' }}">
 
 
@@ -54,12 +56,7 @@
 
             <script src="{{ url static_file='_js/jquery.js' }}" type="text/javascript"></script>
 
-
-            <!-- Video.js -->
-            <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
-            <script src="http://vjs.zencdn.net/c/video.js"></script>
-
-
+            <script src="{{ url static_file='_js/helpers.js' }}" type="text/javascript"></script>
 
 
 
@@ -74,18 +71,20 @@
                 <a href="#" class="close"></a>
                 <div class="content content_text">
                   {{dynamic}}
-                  <h3 class="popup_title bigger">{{ if $gimme->user->logged_in }}Giriş yapıldı{{else}}Taraf'a giriş{{/if}}</h3>
+                  <h3 class="popup_title bigger">{{ if $gimme->user->logged_in }}
+                    {{#welcome#}} {{$gimme->user->name}}
+                    {{else}}{{#login#}}{{/if}}</h3>
                   <div class="styled_form login_form">
                     {{ if $gimme->user->logged_in }}
                     <ul>
-                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">Benim sayfam</a></li>
-                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">Cıkış</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">{{#dashboard#}}</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">{{#logout#}}</a></li>
                     </ul>
                     {{ else }}
 
                     <ul id="logininfo" style="display:none">
-                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">Benim sayfam</a></li>
-                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">Cıkış</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">{{#dashboard#}}</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">{{#logout#}}</a></li>
                     </ul>
 
                     <form name="login" action="/auth" method="post" id="loginform">
@@ -93,7 +92,7 @@
 
 
                      <div class="field_row row">
-                       <label for="l_field_login" class="span2">Email</label>
+                       <label for="l_field_login" class="span2">{{#email#}}</label>
                        <div class="span3">
                         <input type="email" name="email" >
                       </div>
@@ -101,7 +100,7 @@
 
 
                     <div class="field_row row">
-                     <label for="l_field_password" class="span2">Parola</label>
+                     <label for="l_field_password" class="span2">{{#email#}}</label>
                      <div class="span3">
                        <input type="password" name="password">
                      </div>
@@ -110,10 +109,10 @@
                    <div class="field_row row">
                      <div class="span3 offset2">
                        <ul class="login_menu float_left">
-                         <li><a href="/auth/password-restore">Parolamı unuttum</a></li>
-                         <li><a href="/register">Yeni kullanıcı</a></li>
+                         <li><a href="/auth/password-restore">{{#forgotPassword#}}</a></li>
+                         <li><a href="/register">{{#Register#}}</a></li>
                        </ul>
-                       <input type="submit"  value="Giriş" class="float_right">
+                       <input type="submit"  value="{{#Login#}}" class="float_right">
 
 
                      </div>

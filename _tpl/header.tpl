@@ -26,9 +26,9 @@
 <header id="top">
   <div class="top_content">
     <a href="http://{{ $gimme->publication->site }}" id="logo" title="{{ $gimme->publication->name }}"></a>
-    <div class="add">
-     here goes the ad
-     </div>
+    <a href="#" class="add">
+                  <img src="{{ url static_file='_img/ads/top.png' }}" alt="" />
+                </a>
    </div>
 
    <div class="logo_bottom"><div class="text"></div></div>
@@ -48,7 +48,7 @@
     <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{ #viewAllPosts# }} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
     {{ /list_sections }}
 
-
+    <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="Community index">{{ #community# }}</a></li>
 
 
 

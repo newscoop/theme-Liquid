@@ -9,17 +9,17 @@
 }
 
 .icon_link.icon_key {
-	background-image: url(img/icons/key.png);
+	background-image: url(../_img/icons/key.png);
 	padding-left: 23px;
 }
 
 .icon_link.icon_padlock {
-	background-image: url(img/icons/padlock.png);
+	background-image: url(../_img/icons/padlock.png);
 	padding-left: 18px;
 }
 
 .icon_link.icon_search {
-	background-image: url(img/icons/search.png);
+	background-image: url(../_img/icons/search.png);
 	padding-left: 26px;
 }
 
@@ -153,13 +153,28 @@
 	display: block;
 	text-align: center;
 	color: white;
-	background: url(img/small_blue_button_bg.png);
-	border-radius: 10px;
+	background: #008584 ;
+	border:none;
 	font-size: 0.8em;
 	padding: 0px 10px;
 	font-family: 'pf_agora_slab_probold';
 	float:right;
 }
+
+
+.button {
+
+	display: inline-block;
+	text-align: center;
+	color: #fff !important;
+	background: #008584 ;
+	border:none;
+	font-size: 0.8em;
+	padding: 5px 15px;
+
+
+}
+
 
 .content_text .styled_form .login_menu {
 	font-size: 0.8em;
@@ -250,11 +265,117 @@ padding: 0;
 }
 
 .debatte-score li.yes{
-	background-color: #005655;
+	background-color: #008584;
 	color: #fabb85;
 }
 
 .debatte-score li.no{
 	background-color: #fabb85;
 	color: #005655;
+}
+
+
+.rate_widget {
+border: none;
+overflow: visible;
+position: relative;
+}
+
+.stars {
+padding: 0;
+margin: 0 4px 0 0;
+list-style-type: none;
+display: inline-block;
+float: left;
+}
+
+.ratings_stars {
+background: url('../_img/star_empty.png') no-repeat;
+float: left;
+height: 28px;
+padding: 2px;
+width: 28px;
+}
+
+.ratings_vote {
+background: url('../_img/star_full.png') no-repeat;
+}
+
+
+.ratings_over {
+    background: url('../_img/star_highlight.png') no-repeat;
+}
+
+p.total_votes{
+	clear:both;
+	font-size:0.8em !important;
+}
+
+p.rating_error{
+	clear:both;
+	color:red;
+	padding:5px 0;
+}
+
+
+.q-score{
+	display: block;
+	clear: both;
+	position: relative;
+	height: 6px;
+	margin: 5px 0;
+	background: #b40032;
+}
+
+.q-score small {
+position: absolute;
+top: -6px;
+right: -35px;
+background: #fff;
+width: 32px;
+font-size: 12px;
+color: #b40032;
+}
+
+
+.community_ticker ul li {
+padding: 0 0 0 25px;
+margin-bottom: 10px;
+}
+
+li.registered, li.commented {
+padding-left: 25px;
+background-image: url(../_img/community_icons.png);
+background-repeat: no-repeat;
+}
+
+li.commented {
+background-position: 2px -116px;
+}
+
+li.registered {
+background-position: 2px 2px;
+}
+
+
+.community_ticker ul li small {
+display: block;
+color: #636363;
+font-style: italic;
+font-size: 0.8em;
+}
+
+.community_ticker{
+	font-size:0.9em;
+	color:#606060;
+
+}
+
+.community_ticker a{
+	color:#005655;
+}
+
+.image-slideshow, .blueimp-gallery{
+	width:100%;
+
 }

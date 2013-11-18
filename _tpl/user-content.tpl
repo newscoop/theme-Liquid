@@ -44,7 +44,7 @@
 
         {{ if $gimme->current_list->has_previous_elements }}
 
-        <a href="?{{ urlparameters options="previous_items" }}" class="arrow arrow_left" title="">Önceki</a>
+        <a href="?{{ urlparameters options="previous_items" }}" class="arrow arrow_left" title="">{{#previous#}}</a>
 
 
         {{/if}}
@@ -99,7 +99,7 @@
 
          {{ if $gimme->current_list->has_next_elements }}
          {{ unset_article }}
-         <a href="?{{ urlparameters options="next_items" }}" class="arrow arrow_right" title="">Sonraki</a>
+         <a href="?{{ urlparameters options="next_items" }}" class="arrow arrow_right" title="">{{#next#}}</a>
 
          {{ /if }}
        </nav>
@@ -124,7 +124,7 @@
 {{else}}
 
 
-<h2 class="bigger margin_bottom_10">Latest Comments</h2>
+<h2 class="bigger margin_bottom_10">{{#LatestComments#}}</h2>
 
 
 <div class="clear">

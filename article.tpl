@@ -127,7 +127,7 @@
 
         {{ elseif $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}
 
-        <video id="video_{{ $gimme->current_list->index }}" class="video-js vjs-default-skin" controls preload="auto" width="100%" data-setup="{}">
+        <video id="video_{{ $gimme->current_list->index }}" class="video-js vjs-default-skin" controls preload="auto" width="100%" data-setup='{ "loop": "false" }'>
 
           <source src="{{ url options="articleattachment" }}" type='{{ $gimme->attachment->mime_type }}' />
           </video>
@@ -143,31 +143,31 @@
 
           {{ /if }}
           {{ /list_article_attachments }}
-          </div>
-      {{ /if }}
+        </div>
+        {{ /if }}
 
 
 
 
-     {{ list_related_articles }}
-     {{if $gimme->current_list->at_beginning}}
-     <div class="span3 article_side_element related_articles align_right">
-       <h3 class="red_title">{{#relatedArticles#}}</h3>
-       <ul>
-         {{/if}}
-         <li><a href="{{url options="article"}}">{{$gimme->article->name}}</a></li>
+        {{ list_related_articles }}
+        {{if $gimme->current_list->at_beginning}}
+        <div class="span3 article_side_element related_articles align_right">
+         <h3 class="red_title">{{#relatedArticles#}}</h3>
+         <ul>
+           {{/if}}
+           <li><a href="{{url options="article"}}">{{$gimme->article->name}}</a></li>
 
-         {{if $gimme->current_list->at_end}}
-       </ul>
-     </div>
-     {{/if}}
-     {{/list_related_articles }}
-     {{/if}}
-     {{ $bodyAr[1] }}
+           {{if $gimme->current_list->at_end}}
+         </ul>
+       </div>
+       {{/if}}
+       {{/list_related_articles }}
+       {{/if}}
+       {{ $bodyAr[1] }}
 
 
-     <div class="span4 article_side_element align_right">
-      <!--/* OpenX Javascript Tag v2.8.10 */-->
+       <div class="span4 article_side_element align_right">
+        <!--/* OpenX Javascript Tag v2.8.10 */-->
 
                           <!--/*
                             * The backup image section of this tag has been generated for use on a
@@ -248,26 +248,7 @@
                       {{* /article pagination *}}
 
 
-                      <script src="{{ url static_file='_js/socialite.min.js' }}" type="text/javascript"></script>
 
-
-
-                      <div class="social_buttons float_right">
-                        <ul>
-                         <li class="float_right margin_left_5">
-                           <a href="http://twitter.com/share" class="socialite twitter-share" data-text="{{$gimme->article->name|strip_tags|escape}}" data-url="{{url options="article"}}" data-count="vertical"  rel="nofollow" target="_blank"><span class="vhidden">Share on Twitter</span></a>
-                         </li>
-                         <li class="float_right margin_left_5">
-                          <a href="https://plus.google.com/share?url={{url options="article"}}" class="socialite googleplus-one" data-size="tall" data-href="{{url options="article"}}" rel="nofollow" target="_blank"><span class="vhidden">Share on Google+</span></a>
-                        </li>
-                        <li class="float_right margin_left_5">
-                          <a href="http://www.facebook.com/sharer.php?u={{url options="article"}}&amp;t={{$gimme->article->name|strip_tags|escape}}" class="socialite facebook-like" data-href="{{url options="article"}}" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"><span class="vhidden">Share on Facebook</span></a>
-                        </li>
-                      </ul>
-
-                    </div>
-
-                    <span class="clear"></span>
 
                     <script>
                     jQuery(document).ready(function() {
@@ -277,11 +258,41 @@
                     });
 
                     </script>
+                    <div class="row">
+                      <div class="span4">
+                        {{ include file="_tpl/article-rating.tpl" }}
+                      </div>
+                      <div class="span4">
+                          <script src="{{ url static_file='_js/socialite.min.js' }}" type="text/javascript"></script>
+
+
+
+                          <div class="social_buttons float_right">
+                            <ul>
+                             <li class="float_right margin_left_5">
+                               <a href="http://twitter.com/share" class="socialite twitter-share" data-text="{{$gimme->article->name|strip_tags|escape}}" data-url="{{url options="article"}}" data-count="vertical"  rel="nofollow" target="_blank"><span class="vhidden">Share on Twitter</span></a>
+                             </li>
+                             <li class="float_right margin_left_5">
+                              <a href="https://plus.google.com/share?url={{url options="article"}}" class="socialite googleplus-one" data-size="tall" data-href="{{url options="article"}}" rel="nofollow" target="_blank"><span class="vhidden">Share on Google+</span></a>
+                            </li>
+                            <li class="float_right margin_left_5">
+                              <a href="http://www.facebook.com/sharer.php?u={{url options="article"}}&amp;t={{$gimme->article->name|strip_tags|escape}}" class="socialite facebook-like" data-href="{{url options="article"}}" data-send="false" data-layout="box_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"><span class="vhidden">Share on Facebook</span></a>
+                            </li>
+                          </ul>
+
+                        </div>
+
+
+                      </div>
+                    </div>
+                    <span class="clear"></span>
 
                     {{ include file="_tpl/article-comments.tpl" }}
 
+
+
                     {{ else }}
-                                <p>{{ #infoOnLockedArticles# }}</p>
+                    <p>{{ #infoOnLockedArticles# }}</p>
                     {{ /if }}
                   </div>
 

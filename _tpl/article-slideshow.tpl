@@ -1,45 +1,149 @@
- {{ foreach $gimme->article->slideshows as $slideshow }}
- 	{{assign var="som" value=1 }}
- {{/foreach}}
 
-{{if $som==1}}
-
-<div id="thumbs">
-
-
-
-                   {{ foreach $gimme->article->slideshows as $slideshow }}
-
-
-
-{{ foreach $slideshow->items as $item }}
-
-    <a href="http://{{ $gimme->publication->site }}/{{ $item->image->original }}"  title="{{ $item->caption }}">
-<img src="{{ $item->image->src }}" width="{{ $item->image->width }}" height="{{ $item->image->height }}" alt=""  />
-    </a>
-
-
-
-{{ /foreach }}
-
-
-{{ /foreach }}
-
-
-
-         <span class="clear"></span>
-        </div>
-
-             <link rel="stylesheet" href="{{ url static_file='_js/touchTouch/touchTouch.css' }}">
-<script src="{{ url static_file='_js/touchTouch/touchTouch.jquery.js' }}" type="text/javascript"></script>
 
 <script>
-$(function(){
+if(galleryLinksContainer===undefined){
+ var galleryLinksContainer = [];
+ var galleryLinksOriginalContainer = [];
+ var galleryLinks = [];
+ var galleryLinksOriginal = [];
+ var videoNumber = false;
 
-  // Initialize the gallery
-  $('#thumbs a').touchTouch();
 
-});
+}
 </script>
 
-   {{/if}}
+{{ assign var="i" value=0 }}
+{{ foreach $gimme->article->slideshows as $slideshow name=slideshowlist }}
+
+<script>
+galleryLinks = [];
+galleryLinksOriginal = [];
+</script>
+
+
+{{ foreach $slideshow->items as $item name=insideslideshow }}
+{{ if $smarty.foreach.insideslideshow.first}}
+<div class="image-slideshow">
+ <a class="fullscreenButton" data-gallery="{{ $i }}"></a>
+ <div id="blueimp-image-carousel_{{ $i }}" class="blueimp-gallery blueimp-gallery-carousel">
+   <div class="slides"></div>
+
+   <a class="prev">‹</a>
+   <a class="next">›</a>
+   <ol class="indicator"></ol>
+</div>
+<p class="slide-caption"></p>
+</div>
+<script>
+{{ /if }}
+
+{{ if $item->is_image }}
+
+
+
+
+galleryLinksOriginal.push({
+
+   title: '{{$item->caption|escape }}',
+   href: '{{ $item->image->original }}',
+   type: 'image/jpeg'
+
+});
+
+galleryLinks.push({
+
+   title: '{{$item->caption|escape }}',
+   href: '{{ $item->image->src }}',
+   type: 'image/jpeg'
+
+});
+
+
+
+{{ else }}
+
+
+
+
+videoNumber = youtube_parser("{{ $item->video->url }}");
+//youtube
+if( videoNumber ){
+   galleryLinks.push({
+    title: '{{$item->caption|escape }}',
+    href: '{{$item->video->url}}',
+    type: 'text/html',
+    youtube: videoNumber,
+    poster: 'http://img.youtube.com/vi/'+videoNumber+'/0.jpg'
+
+});
+
+   galleryLinksOriginal.push({
+    title: '{{$item->caption|escape }}',
+    href: '{{$item->video->url}}',
+    type: 'text/html',
+    youtube: videoNumber,
+    poster: 'http://img.youtube.com/vi/'+videoNumber+'/0.jpg'
+
+});
+
+}else{
+
+
+
+    videoNumber = vimeo_parser("{{ $item->video->url }}");
+
+    //vimeo
+    if (videoNumber){
+
+
+
+            var vimeoObj = new Object();
+            vimeoObj.title = '{{$item->caption|escape }}';
+            vimeoObj.href = '{{$item->video->url}}';
+            vimeoObj.type = 'text/html';
+            vimeoObj.vimeo = videoNumber;
+            vimeoObj.poster = vimeo_thumb(videoNumber);
+
+
+
+            galleryLinks.push(vimeoObj);
+
+            galleryLinksOriginal.push(vimeoObj);
+
+
+
+
+
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+{{ /if }}
+
+{{ if $smarty.foreach.insideslideshow.last }}
+console.log(galleryLinks);
+galleryLinksContainer.push(galleryLinks);
+galleryLinksOriginalContainer.push(galleryLinksOriginal);
+</script>
+
+{{/if}}
+{{ /foreach }}
+
+
+
+
+
+{{ /foreach }}

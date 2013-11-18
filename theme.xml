@@ -26,11 +26,11 @@
             <rendition name="front_big" width="460" height="310" specs="crop"/>
 
 
-            <rendition name="slideshow" width="160" height="107" specs="crop"/>
+            <rendition name="slideshow" width="620" height="413" specs="crop"/>
 
-            <rendition name="dossier" width="395" height="265" specs="crop"/>
 
-            <rendition name="pdf" width="260" height="380" specs="crop"/>
+
+
 
 	</renditions>
 </theme>

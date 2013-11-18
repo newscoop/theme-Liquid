@@ -4,11 +4,7 @@
     <ul>
       {{ list_articles ignore_issue="true" ignore_section="false" order="byPublishDate desc" length="10"  }}
 
-      {{if $gimme->current_list->index==4}}
-      <li class="news_item">
 
-      </li>
-      {{/if}}
       <li class="news_item">
         <div class="content content_text">
 

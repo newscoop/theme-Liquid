@@ -25,7 +25,7 @@
 
 #titlebar_menu li:first-child {
 	padding: 0px;
-	marrgin: 0px;
+	margin: 0px;
 	border: 0px;
 }
 
@@ -86,7 +86,7 @@
 	display: block;
 	width: 41px;
 	height: 22px;
-	background: url(img/search_button.png);
+	background: url(../_img/search_button.png);
 }
 
 
@@ -104,7 +104,7 @@
 	display: block;
 	width: 177px;
 	height: 96px;
-	background: url(img/logo.png) no-repeat bottom;
+	background: url(../_img/logo.png) no-repeat bottom;
 	float: left;
 }
 
@@ -114,12 +114,12 @@
 
 #top .logo_bottom {
 	height: 14px;
-	background: url(img/logo_bottom_bg.png);
+	background: url(../_img/logo_bottom_bg.png);
 }
 
 #top .logo_bottom .text {
 	height: 14px;
-	background: url(img/logo_bottom_text.png) no-repeat left;
+	background: url(../_img/logo_bottom_text.png) no-repeat left;
 }
 
 
@@ -144,6 +144,10 @@
 #top_menu .menu > li {
 	float: left;
 	padding-left: 12px;
+}
+#top_menu .menu li:last-child {
+float: right;
+margin-right:10px;
 }
 
 #top_menu .menu > li a {
@@ -310,7 +314,7 @@
 	position: absolute;
 	width: 16px;
 	height: 15px;
-	background: url(img/cross.png);
+	background: url(../_img/cross.png);
 	top: 20px;
 	right: 20px;
 }

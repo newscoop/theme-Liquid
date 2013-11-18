@@ -2,16 +2,11 @@
 
 {{block content}}
 
-<script>
-  window.location.href = 'http://{{ $gimme->publication->site }}';
-</script>
-
-{{ assign var="userindex" value=1 }}
 
 
 
 
-{{ assign var="column" value=1 }}
+
 {{ assign var="index" value=0 }}
 {{ foreach $users as $user }}
 
@@ -23,9 +18,10 @@
     {{else}}
     <img src="{{url static_file="_img/user-thumb.jpg" }}" class="thumbnail"  />
     {{/if}}
-
+    </a>
     <div class="text">
-      <h3 class="bigger">{{ if $user->author->defined }}{{ $user->author->biography->first_name }} {{ $user->author->biography->last_name }}{{ else if $user->first_name }}{{ $user->first_name }} {{ $user->last_name }}{{else}}{{$user->uname}}{{ /if }}</h3>
+
+      <h3 class="bigger"><a href="{{ $view->url(['username' => $user->uname], 'user') }}">{{ if $user->author->defined }}{{ $user->author->biography->first_name }} {{ $user->author->biography->last_name }}{{ else if $user->first_name }}{{ $user->first_name }} {{ $user->last_name }}{{else}}{{$user->uname}}{{ /if }} </a></h3>
 
       {{ if $user->author->defined }}<p>{{ $user->author->biography->text|strip_tags }}</p>
       {{else}}
@@ -40,7 +36,7 @@
 
 
     </div>
-  </a>
+
   </div>
   <span class="clear"></span>
 </div>

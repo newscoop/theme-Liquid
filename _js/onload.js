@@ -1,7 +1,129 @@
 ﻿/* jQuery
-    ``````````````````````````````````````````````````````````````````````````` */
+``````````````````````````````````````````````````````````````````````````` */
+window.onload = function() {
+    $('#masonry_container').masonry({
+        columnWidth: function(containerWidth) {
+            return containerWidth / 4;
+        }
+    });
+
+
+};
 
 $(document).ready(function() {
+
+
+
+    if (typeof galleryLinksContainer !== 'undefined' && galleryLinksContainer.length > 0) {
+
+        var galleries = [];
+
+        var carouselOptions = {
+            startSlideshow: false
+        };
+
+
+
+        $.each(galleryLinksContainer, function(i, item) {
+
+            console.log(item);
+            var gallery = blueimp.Gallery(item, {
+                container: '#blueimp-image-carousel_' + i,
+                carousel: true,
+                startSlideshow: false,
+
+                onslide: function(index, slide) {
+
+                    var galleryContainer = this.options.container;
+
+                    var caption = this.list[index].title;
+
+
+
+                    $(galleryContainer).parent().find(".slide-caption").html(caption);
+
+                    // nav update
+                    $(galleryContainer).parent().find(".slideshow-nav a").removeClass("active");
+                    $(galleryContainer).parent().find('.slideshow-nav a[data-index="' + index + '"]').addClass("active");
+
+
+
+                }
+            });
+
+            galleries.push(gallery);
+
+        }); // each end
+
+        // navigation events
+        $(".slideshow-nav a").bind("click", function(e) {
+            e.preventDefault();
+            var gallery_index = $(this).attr('data-gallery');
+            var image_index = $(this).attr('data-index');
+
+            galleries[gallery_index].slide(image_index);
+            return false;
+        });
+
+        // fullscreen gallery
+        var fullscreen_gallery;
+
+
+        $(".fullscreenButton").bind("click", function(e) {
+            e.preventDefault();
+            var gallery_index = $(this).attr('data-gallery');
+
+            var galleryImage_index = galleries[gallery_index].getIndex();
+
+            fullscreen_gallery = blueimp.Gallery(galleryLinksOriginalContainer[gallery_index], {
+                container: '#blueimp_fullscreen',
+                carousel: true,
+                startSlideshow: false,
+                closeOnSlideClick: true,
+                closeOnEscape: true,
+                closeOnSwipeUpOrDown: true,
+                disableScroll: true,
+                enableKeyboardNavigation: true,
+                index: galleryImage_index,
+
+                onslide: function(index, slide) {
+
+                    var galleryContainer = this.options.container;
+
+                    var caption = '';
+                    caption += this.list[index].title;
+                    if (this.list[index].photographer.length > 0) {
+                        caption += ' (Bild: ';
+                        if (this.list[index].photographer_url.length > 0) {
+                            caption += '<a href="' + this.list[index].photographer_url + '">' + this.list[index].photographer + '</a>';
+                        } else {
+                            caption += this.list[index].photographer;
+                        }
+
+                        caption += ')';
+                    }
+
+
+                    $(galleryContainer).find(".caption").html(caption);
+
+
+
+                }
+
+            });
+        });
+
+
+    }
+
+
+
+    $('#poll-button').click(function() {
+        $.post($('form[name=debate]').attr("action"), $('form[name=debate]').serialize(), function(data) {
+            $('#polldiv').html(data);
+        });
+        return false;
+    });
 
 
     $('.tabs_box').each(function(index, el) {
