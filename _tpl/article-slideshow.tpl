@@ -25,7 +25,7 @@ galleryLinksOriginal = [];
 {{ if $smarty.foreach.insideslideshow.first}}
 <div class="image-slideshow">
  <a class="fullscreenButton" data-gallery="{{ $i }}"></a>
- <div id="blueimp-image-carousel_{{ $i }}" class="blueimp-gallery blueimp-gallery-carousel">
+ <div id="blueimp-image-carousel_{{ $i }}" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls">
    <div class="slides"></div>
 
    <a class="prev">‹</a>
@@ -38,8 +38,6 @@ galleryLinksOriginal = [];
 {{ /if }}
 
 {{ if $item->is_image }}
-
-
 
 
 galleryLinksOriginal.push({
@@ -134,7 +132,7 @@ if( videoNumber ){
 {{ /if }}
 
 {{ if $smarty.foreach.insideslideshow.last }}
-console.log(galleryLinks);
+
 galleryLinksContainer.push(galleryLinks);
 galleryLinksOriginalContainer.push(galleryLinksOriginal);
 </script>

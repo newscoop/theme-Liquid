@@ -248,10 +248,10 @@ h3.debate_headline{
 }
 
 .debatte-score{
-overflow: hidden;
-margin: 0!important;
-list-style-type: none;
-padding: 0;
+	overflow: hidden;
+	margin: 0!important;
+	list-style-type: none;
+	padding: 0;
 }
 
 .debatte-score li{
@@ -276,34 +276,34 @@ padding: 0;
 
 
 .rate_widget {
-border: none;
-overflow: visible;
-position: relative;
+	border: none;
+	overflow: visible;
+	position: relative;
 }
 
 .stars {
-padding: 0;
-margin: 0 4px 0 0;
-list-style-type: none;
-display: inline-block;
-float: left;
+	padding: 0;
+	margin: 0 4px 0 0;
+	list-style-type: none;
+	display: inline-block;
+	float: left;
 }
 
 .ratings_stars {
-background: url('../_img/star_empty.png') no-repeat;
-float: left;
-height: 28px;
-padding: 2px;
-width: 28px;
+	background: url('../_img/star_empty.png') no-repeat;
+	float: left;
+	height: 28px;
+	padding: 2px;
+	width: 28px;
 }
 
 .ratings_vote {
-background: url('../_img/star_full.png') no-repeat;
+	background: url('../_img/star_full.png') no-repeat;
 }
 
 
 .ratings_over {
-    background: url('../_img/star_highlight.png') no-repeat;
+	background: url('../_img/star_highlight.png') no-repeat;
 }
 
 p.total_votes{
@@ -328,41 +328,41 @@ p.rating_error{
 }
 
 .q-score small {
-position: absolute;
-top: -6px;
-right: -35px;
-background: #fff;
-width: 32px;
-font-size: 12px;
-color: #b40032;
+	position: absolute;
+	top: -6px;
+	right: -35px;
+	background: #fff;
+	width: 32px;
+	font-size: 12px;
+	color: #b40032;
 }
 
 
 .community_ticker ul li {
-padding: 0 0 0 25px;
-margin-bottom: 10px;
+	padding: 0 0 0 25px;
+	margin-bottom: 10px;
 }
 
 li.registered, li.commented {
-padding-left: 25px;
-background-image: url(../_img/community_icons.png);
-background-repeat: no-repeat;
+	padding-left: 25px;
+	background-image: url(../_img/community_icons.png);
+	background-repeat: no-repeat;
 }
 
 li.commented {
-background-position: 2px -116px;
+	background-position: 2px -116px;
 }
 
 li.registered {
-background-position: 2px 2px;
+	background-position: 2px 2px;
 }
 
 
 .community_ticker ul li small {
-display: block;
-color: #636363;
-font-style: italic;
-font-size: 0.8em;
+	display: block;
+	color: #636363;
+	font-style: italic;
+	font-size: 0.8em;
 }
 
 .community_ticker{
@@ -377,5 +377,26 @@ font-size: 0.8em;
 
 .image-slideshow, .blueimp-gallery{
 	width:100%;
+	position: relative;
+}
 
+#blueimp_fullscreen{
+	position:fixed;
+}
+.image-slideshow .fullscreenButton {
+	display: block;
+	width: 57px;
+	height: 57px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	background-image: url(../_img/open-slideshow.png);
+	background-repeat: no-repeat;
+	background-position: 15px 15px;
+	cursor: pointer;
+}
+
+.image-slideshow .fullscreenButton:hover {
+	background-color: rgba(255, 255, 255, .4);
 }

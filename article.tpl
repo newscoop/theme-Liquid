@@ -19,7 +19,15 @@
 
 {{ include file="_tpl/_html-head.tpl" }}
 
+<div id="blueimp_fullscreen" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
 
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <ol class="indicator"></ol>
+    <div class="caption"></div>
+</div>
 
 <div id="page" class="container">
 

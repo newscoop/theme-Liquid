@@ -26,7 +26,7 @@ $(document).ready(function() {
 
         $.each(galleryLinksContainer, function(i, item) {
 
-            console.log(item);
+
             var gallery = blueimp.Gallery(item, {
                 container: '#blueimp-image-carousel_' + i,
                 carousel: true,
@@ -42,9 +42,6 @@ $(document).ready(function() {
 
                     $(galleryContainer).parent().find(".slide-caption").html(caption);
 
-                    // nav update
-                    $(galleryContainer).parent().find(".slideshow-nav a").removeClass("active");
-                    $(galleryContainer).parent().find('.slideshow-nav a[data-index="' + index + '"]').addClass("active");
 
 
 
@@ -55,15 +52,7 @@ $(document).ready(function() {
 
         }); // each end
 
-        // navigation events
-        $(".slideshow-nav a").bind("click", function(e) {
-            e.preventDefault();
-            var gallery_index = $(this).attr('data-gallery');
-            var image_index = $(this).attr('data-index');
 
-            galleries[gallery_index].slide(image_index);
-            return false;
-        });
 
         // fullscreen gallery
         var fullscreen_gallery;
@@ -90,21 +79,7 @@ $(document).ready(function() {
 
                     var galleryContainer = this.options.container;
 
-                    var caption = '';
-                    caption += this.list[index].title;
-                    if (this.list[index].photographer.length > 0) {
-                        caption += ' (Bild: ';
-                        if (this.list[index].photographer_url.length > 0) {
-                            caption += '<a href="' + this.list[index].photographer_url + '">' + this.list[index].photographer + '</a>';
-                        } else {
-                            caption += this.list[index].photographer;
-                        }
-
-                        caption += ')';
-                    }
-
-
-                    $(galleryContainer).find(".caption").html(caption);
+                    $(galleryContainer).find(".caption").html(this.list[index].title);
 
 
 

@@ -33,7 +33,7 @@
              res = result[0].thumbnail_large;
          },
          error: function(result) {
-             res= null;
+             res  = false;
          },
          async:false
      });
