@@ -13,6 +13,17 @@
 /* General */
 /* ---------------- */
 
+@viewport{
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
 * {
     border: 0;
     margin: 0;
@@ -25,7 +36,7 @@ a, input, textarea{
 }
 
 h1,h2,h3 {
-    color:#005655;
+    color:#00b4ff;
     font-family: 'bentonsanscompbold';
 }
 
@@ -39,7 +50,7 @@ h3{
     font-size:1.5em;
 }
 .article_content a, .comment-content a{
-    color:#005655;
+    color:#00b4ff;
 }
 
 .article_content .info a, .article_content .topics a{

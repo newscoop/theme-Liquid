@@ -34,6 +34,7 @@
 
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="{{ url static_file='_img/favicon.ico' }}">

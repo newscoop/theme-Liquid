@@ -30,7 +30,7 @@
 .content_text h1 {
 	font-size: 2.5em; /* 40 */
 	font-family: 'bentonsanscompbold';
-	color: #005655;
+	color: #00b4ff;
 	line-height: 1.2em;
 	padding-bottom: 10px;
 }
@@ -38,7 +38,7 @@
 .content_text h2 {
 	font-size: 2em; /* 3kilka */
 	font-family: 'bentonsanscompbold';
-	color: #005655;
+	color: #00b4ff;
 	line-height: 1.2em;
 	padding-bottom: 10px;
 }
@@ -56,7 +56,7 @@
 .content_text h3 {
 	font-size: 1.5em; /* 24 */
 	font-family: 'bentonsanscompbold';
-	color: #005655;
+	color: #00b4ff;
 	line-height: 1.2em;
 	padding-bottom: 10px;
 }
@@ -266,12 +266,12 @@ h3.debate_headline{
 
 .debatte-score li.yes{
 	background-color: #008584;
-	color: #fabb85;
+	color: #515151;
 }
 
 .debatte-score li.no{
-	background-color: #fabb85;
-	color: #005655;
+	background-color: #515151;
+	color: #00b4ff;
 }
 
 
@@ -372,7 +372,7 @@ li.registered {
 }
 
 .community_ticker a{
-	color:#005655;
+	color:#00b4ff;
 }
 
 .image-slideshow, .blueimp-gallery{

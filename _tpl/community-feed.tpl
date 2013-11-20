@@ -3,7 +3,7 @@
 {{ list_community_feeds length="10" }}
 
 {{ if $gimme->current_list->at_beginning }}
-<div class="community_ticker" class="clearfix">
+<div class="community_ticker hidden-phone" >
     <h3>{{ #communityFeed# }}</h3>
         <ul>
 {{ /if }}

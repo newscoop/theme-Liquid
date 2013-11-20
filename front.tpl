@@ -143,7 +143,7 @@
 {{ render file="_tpl/community-feed.tpl"  issue=off section=off cache=400 }}
 
 
-<a href="#" class="grey_ad"><img src="{{ url static_file='_img/ads/300x250.png' }}" alt="" /></a>
+<a href="http://www.sourcefabric.org/" class="grey_ad hidden-phone"><img src="{{ url static_file='_img/ads/300x250.png' }}" alt="" /></a>
 
 {{ render file="_tpl/front-poll.tpl"  issue=off section=off cache=4400 }}
 </div>
