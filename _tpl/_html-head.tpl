@@ -96,6 +96,7 @@
                        <label for="l_field_login" class="span2">{{#email#}}</label>
                        <div class="span3">
                         <input type="email" name="email" >
+                        <input type="hidden" name="ajax" value="1" />
                       </div>
                     </div>
 
