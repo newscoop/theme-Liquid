@@ -17,6 +17,19 @@
 		padding-left: 0px;
 	}
 
+	.article_content .news_item .content {
+	padding: 0 5px;
+	}
+
+	.bloger {
+	padding: 0px 5px 30px 5px;
+
+	}
+
+	#footer_menu_second{
+		padding: 0 5px;
+	}
+
 }
 
 @media (max-width: 500px) {

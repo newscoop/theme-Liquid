@@ -10,17 +10,17 @@
 
 
 
-<h3 class="normal_header">Kayıt</h3>
+<h3 class="normal_header">{{ #registerYourself# }}</h3>
 
 
 
-<h4>Onay gönderildi</h4>
+<h4>{{ #confirmationSent# }}</h4>
 
 <div class="alert alert-info">
 
 
-	<p>E-posta'da gönderilen talimatları uygulayınız</p>
-	<p>Kayıt olduğunuz için teşekkürler</p>
+	<p>{{ #followEmailSteps# }}</p>
+	<p>{{ #thanksForRegistering# }}</p>
 
 
 
