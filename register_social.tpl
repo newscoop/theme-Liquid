@@ -9,13 +9,13 @@
 
 
 
- <h3 class="normal_header">{{ $name }}!</h3>
+ <h3 class="normal_header">{{ #hello# }} {{ $name }}</h3>
 
 
 
 
 
-<p>Hello, this is your first visit to this website, please register.</p>
+<p>{{ #fillYourData# }}</p>
 
 
 

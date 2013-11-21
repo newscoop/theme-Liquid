@@ -3,7 +3,7 @@
 <!-- Footer -->
 <footer id="footer">
   <div class="container">
-      <ul id="footer_menu_first" class="menu">
+      <ul id="footer_menu_first" class="menu hidden-phone">
         {{local}}
         {{ set_current_issue }}
             {{ list_sections }}

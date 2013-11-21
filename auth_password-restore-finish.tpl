@@ -2,7 +2,7 @@
 
 {{block content}}
  <h3 class="normal_header">
- Yeni parola
+ {{ #setNewPassword# }}
 </h3>
 
 <div class="register_form">
@@ -10,7 +10,7 @@
 	<fieldset>
         {{ if $form->isErrors() }}
         <div class="alert alert-error">
-         <p>Parola değiştirilmedi, lütfen talimatları takip ederek tekrar deneyin</p>
+         <p>{{ #couldNotChange# }}</p>
 
 
 
@@ -19,11 +19,11 @@
     </fieldset>
     <fieldset class="fixBackground background-block login">
         <dl>
-                {{ $form->password->setLabel("Yeni parola")->removeDecorator('Errors') }}
+                {{ $form->password->setLabel("{{ #newPassword# }}")->removeDecorator('Errors') }}
                 {{ if $form->password->hasErrors() }}
                 <dt class="info-block">&nbsp;</dt>
                 <dd class="info-block">
-                  <span class="error-info">Lütfen yeni parolanızı yazınız (en az 6 karakter)</span>
+                  <span class="error-info">{{ #enterNewPassword# }}</span>
 
 
                 </dd>
@@ -34,14 +34,14 @@
                 {{ if $form->password_confirm->hasErrors() && !$form->password->hasErrors() }}
                 <dt class="info-block">&nbsp;</dt>
                 <dd class="info-block">
-                	<span class="error-info">Parola aynı değil</span>
+                	<span class="error-info">{{ #doesNotMatch# }}</span>
                 </dd>
                 {{ /if }}
          </dl>
 
 
              <p class="overflow_hidden"><button type="submit" id="submit" class="purple_button ">
-                Şifre değiştir
+                {{ #savePassword# }}
              </button></p>
 
 
