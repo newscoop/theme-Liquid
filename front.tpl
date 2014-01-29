@@ -138,7 +138,7 @@
 
 {{if $gimme->current_list->index==4}}
 
-<div class="span4">
+<div class="span4 sidebar">
 
 {{ render file="_tpl/community-feed.tpl"  issue=off section=off cache=400 }}
 

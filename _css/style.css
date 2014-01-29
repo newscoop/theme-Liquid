@@ -36,7 +36,7 @@ a, input, textarea{
 }
 
 h1,h2,h3 {
-    color:#00b4ff;
+    color: #475f77;
     font-family: 'bentonsanscompbold';
 }
 
@@ -126,8 +126,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ---------------- */
 
 body {
-    border-top: 3px solid #3298a7;
+    border-top: 3px solid #d74b4b;
     font-family: 'pf_agora_slab_promedium';
+    background-color: #eeeeee;
 }
 
 
