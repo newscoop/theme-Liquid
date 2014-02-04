@@ -5,7 +5,7 @@
 	line-height: 21px;
 	font-family: 'Oswald', sans-serif;
 	font-size: 0.875em;
-	color: #606060;
+	color: #475f77;
 }
 
 .icon_link.icon_key {
@@ -57,8 +57,7 @@
 .content_text h3 {
 	font-size: 1.5em; /* 24 */
 	font-family: 'Oswald', sans-serif;
-	color: #00b4ff;
-	line-height: 1.2em;
+	line-height: 1.3em;
 	padding-bottom: 5px;
 	text-transform: uppercase;
 }

@@ -32,10 +32,9 @@
 
 
   <div class="search_area hidden-phone" >
-    <span class="icon_link icon_search">{{ #search# }}:</span>
 
     {{ search_form template="search.tpl" submit_button="" }}
-    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{ #keywords# }}\"" }}
+    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{ #Search# }}\"" }}
     {{ /search_form }}
 
 
@@ -70,7 +69,6 @@
                 </a>
    </div>
 
-   <div class="logo_bottom"><div class="text"></div></div>
  </header>
  <!-- End Top -->
 
