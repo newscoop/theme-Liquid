@@ -10,7 +10,7 @@
 
 #titlebar_menu {
 	font-size: 0.875em;
-	font-family: 'bentonsanscompregular';
+	font-family: 'Oswald', sans-serif;
 	float: left;
 	padding-top: 4px;
 }
@@ -138,8 +138,9 @@
 }
 
 #top_menu .menu {
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	position: relative;
+	text-transform: uppercase;
 }
 
 #top_menu .menu > li {
@@ -152,7 +153,7 @@ margin-right:10px;
 }
 
 #top_menu .menu > li a {
-	color: #3d021e;
+	color: #475f77;
 }
 
 #top_menu .menu > li > a:hover,
@@ -199,7 +200,7 @@ margin-right:10px;
 	left: -210px;
 	text-align: right;
 	font-size: 1.125em;
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 }
 
 #outer_side_menu .menu {
@@ -224,11 +225,12 @@ margin-right:10px;
 
 
 #footer {
-	background: #1e1d19;
+	background: #4a4a4a;
 	height: 100px;
 	padding-top: 15px;
-	font-family: 'bentonsanscompregular';
+	font-family: 'Oswald', sans-serif;
 	color: #5e5d5a;
+	margin-top: 30px;
 }
 
 #footer a {
@@ -268,6 +270,7 @@ margin-right:10px;
 
 #footer #footer_menu_first li {
 	border-right: 1px solid white;
+	text-transform: uppercase;
 }
 
 #footer #footer_menu_first li a {
@@ -279,11 +282,13 @@ margin-right:10px;
 }
 
 #footer #footer_menu_second li {
-	border-right: 1px solid #5e5d5a;
+	border-right: 1px solid #fff;
 }
 
 #footer #footer_menu_second li a {
-	color: #5e5d5a;
+	color: #fff;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 0.9em;
 }
 
 

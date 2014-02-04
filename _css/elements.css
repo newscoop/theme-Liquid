@@ -8,7 +8,7 @@
 	font-size: 2.188em;
 	color: white;
 	background: #ce3213;
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	padding-left: 18px;
 	margin-bottom: 12px;
 }
@@ -87,11 +87,12 @@
 }
 
 .news_item .content .info {
+	font-family: Tahoma, Arial, sans-serif;
 	color: #d74b4b;
 	padding-top: 10px;
-
 	line-height: 1.1em;
 	padding-bottom: 5px;
+	text-transform: uppercase;
 }
 .news_item .content .topics {
 	color: #515151;
@@ -159,7 +160,7 @@
 	background: #68dbff;
 	color: white;
 	bottom: 0px;
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	font-size: 1.05em;
 	right: 30px;
 	padding: 0px 5px;
@@ -171,7 +172,6 @@
 	background: #475f77;
 	color: white;
 	padding: 20px;
-	margin-bottom: 10px;
 }
 
 .blue_box .news_item {
@@ -185,14 +185,14 @@
 }
 
 .blue_box.blue_box_posts {
-	border-top: 3px solid #1e1d19;
 	position: relative;
 }
 
 .blue_box.blue_box_posts .tabs_menu {
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	position: absolute;
 	top: 0px;
+	left: 0px;
 }
 
 .blue_box.blue_box_posts .tabs_menu li {
@@ -202,7 +202,9 @@
 }
 
 .blue_box.blue_box_posts .tabs_menu li a {
+	font-family: Tahoma, Arial, sans-serif;
 	color: white;
+	text-transform: uppercase;
 	height: 45px;
 	line-height: 45px;
 	display: block;
@@ -212,7 +214,7 @@
 .blue_box.blue_box_posts .tabs_menu li a:hover,
 .blue_box.blue_box_posts .tabs_menu li.current a
 {
-	background: #1e1d19;
+	background: #d74b4b;
 	text-decoration: none;
 }
 
@@ -227,6 +229,7 @@
 	background: #f4f4f4;
 	padding: 10px;
 	display: block;
+	margin-bottom: 20px;
 }
 
 .grey_ad img {
@@ -352,8 +355,8 @@
 
 
 
-.article_content {
-
+.article_content .news_item {
+	padding: 30px;
 }
 
 .article_content .article_side_element {
@@ -381,7 +384,6 @@
 
 .article_content .article_side_element.article_side_attachments{
 	clear:both;
-	margin-top:10px;
 }
 
 .related_articles .red_title {
@@ -389,7 +391,7 @@
 }
 
 .related_articles ul {
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 }
 
 .related_articles ul li {
@@ -591,7 +593,7 @@ min-height: 200px;
 .pagination ul li.current a {
 	font-size: 1.4em;
 	color: #01a7a3;
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 }
 
 
@@ -609,7 +611,7 @@ min-height: 200px;
 	float: left;
 	font-size: 0.9em;
 	padding: 0px 10px 0px 20px;
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 }
 
 .search_area.extended .radio_field label {
