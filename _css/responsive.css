@@ -87,6 +87,8 @@
 	.article_content .span8 .article_side_element.align_left {
 		left: -124px;
 		margin-right: -114px;
+		padding: 30px;
+		background: #fff;
 	}
 
 	.article_content .span8 .article_side_element.align_right {
@@ -122,6 +124,8 @@
 	.article_content .span8 .article_side_element.align_left {
 		left: -160px;
 		margin-right: -150px;
+		padding: 30px;
+		background: #fff;
 	}
 
 	.article_content .span8 .article_side_element.align_right {

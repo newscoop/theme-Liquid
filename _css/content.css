@@ -3,7 +3,7 @@
 	background-position: left center;
 	height: 21px;
 	line-height: 21px;
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	font-size: 0.875em;
 	color: #606060;
 }
@@ -29,7 +29,7 @@
 
 .content_text h1 {
 	font-size: 2.5em; /* 40 */
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	color: #00b4ff;
 	line-height: 1.2em;
 	padding-bottom: 10px;
@@ -37,10 +37,11 @@
 
 .content_text h2 {
 	font-size: 2em; /* 3kilka */
-	font-family: 'bentonsanscompbold';
-	color: #00b4ff;
+	font-family: 'Oswald', sans-serif;
+	color: #475f77;
 	line-height: 1.2em;
 	padding-bottom: 10px;
+	text-transform: uppercase;
 }
 
 .content_text h2.page_title {
@@ -55,10 +56,11 @@
 
 .content_text h3 {
 	font-size: 1.5em; /* 24 */
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	color: #00b4ff;
 	line-height: 1.2em;
-	padding-bottom: 10px;
+	padding-bottom: 5px;
+	text-transform: uppercase;
 }
 
 .content_text h3.bigger {
@@ -67,24 +69,24 @@
 
 .content_text h4 {
 	font-size: 1.2em; /* 18 */
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	padding-bottom: 10px;
 }
 
 .content_text h5 {
 	font-size: 1em; /* 16 */
-	font-family: 'pf_agora_slab_probold';
+	font-family: Tahoma, Arial, sans-serif;
 }
 
 .content_text h6 {
 	font-size: 0.725em; /* 10 */
-	font-family: 'pf_agora_slab_promedium'
+	font-family: Tahoma, Arial, sans-serif;
 
 }
 
 .content_text p {
 	font-size: 1em;
-	font-family: georgia, tahoma, arial, sans-serif;
+	font-family: Tahoma, Arial, sans-serif;
 	padding-bottom: 6px;
 }
 
@@ -157,13 +159,14 @@
 	border:none;
 	font-size: 0.8em;
 	padding: 0px 10px;
-	font-family: 'pf_agora_slab_probold';
+	font-family: Tahoma, Arial, sans-serif;
 	float:right;
 }
 
 
 .button {
-
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
 	display: inline-block;
 	text-align: center;
 	color: #fff !important;
@@ -171,8 +174,6 @@
 	border:none;
 	font-size: 0.8em;
 	padding: 5px 15px;
-
-
 }
 
 
@@ -213,7 +214,7 @@
 .content_text h3.role {
 
 	font-size: 1.5em;
-	font-family: 'bentonsanscompbold';
+	font-family: 'Oswald', sans-serif;
 	color: #fabb86;
 	line-height: 1em;
 	padding-bottom: 10px;
@@ -322,14 +323,14 @@ p.rating_error{
 	display: block;
 	clear: both;
 	position: relative;
-	height: 6px;
+	height: 4px;
 	margin: 5px 0;
 	background: #d74b4b;
 }
 
 .q-score small {
 	position: absolute;
-	top: -6px;
+	top: -8px;
 	right: -35px;
 	background: #fff;
 	width: 32px;
@@ -360,14 +361,14 @@ li.registered {
 
 .community_ticker ul li small {
 	display: block;
-	color: #636363;
-	font-style: italic;
+	color: #606060;
 	font-size: 0.8em;
 }
 
 .community_ticker{
 	font-size:0.9em;
 	color:#606060;
+	margin-bottom: 20px;
 
 }
 

@@ -2,7 +2,7 @@
 
 @import url('bootstrap.css');
 
-@import url('fonts/fonts.css');
+@import url(http://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
 
 @import url('content.css');
 @import url('static.css');
@@ -37,7 +37,8 @@ a, input, textarea{
 
 h1,h2,h3 {
     color: #475f77;
-    font-family: 'bentonsanscompbold';
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 h1{
@@ -50,7 +51,7 @@ h3{
     font-size:1.5em;
 }
 .article_content a, .comment-content a{
-    color:#00b4ff;
+    color: #d74b4b;
 }
 
 .article_content .info a, .article_content .topics a{
@@ -127,7 +128,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
     border-top: 3px solid #d74b4b;
-    font-family: 'pf_agora_slab_promedium';
+    font-family: Tahoma, Arial, sans-serif;
     background-color: #eeeeee;
 }
 
