@@ -2,7 +2,7 @@
 
 {{ $escapedName=str_replace(" ", "\ ", $user->author->name) }}
 <div class="bloger_news_items clear">
-  <div class="space_left_content">
+  <div>
     <ul>
 
       {{ list_articles ignore_publication="true" ignore_issue="true" ignore_section="true" constraints="author is `$escapedName`"  order="ByPublishDate desc" length="5"  }}

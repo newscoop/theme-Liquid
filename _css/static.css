@@ -146,10 +146,16 @@
 #top_menu .menu > li {
 	float: left;
 	padding-left: 12px;
+	font-size: 1.1em;
 }
+
+#top_menu .menu > li:first-child {
+	padding-left: 0px;
+}
+
 #top_menu .menu li:last-child {
 float: right;
-margin-right:10px;
+margin-right: 0px;
 }
 
 #top_menu .menu > li a {
