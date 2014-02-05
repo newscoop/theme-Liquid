@@ -69,7 +69,6 @@
 .content_text h4 {
 	font-size: 1.2em; /* 18 */
 	font-family: 'Oswald', sans-serif;
-	padding-bottom: 10px;
 }
 
 .content_text h5 {
@@ -90,7 +89,7 @@
 }
 
 .article_content .content_text p{
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 .content_text.content_text_smaller p {
@@ -117,49 +116,50 @@
 
 .content_text .styled_form .field_row {
 	overflow: hidden;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
 
 .content_text .styled_form label {
 
 }
 
-.content_text  input[type="text"],
-.content_text  input[type="email"],
-.content_text  input[type="password"],
-.content_text  textarea
+.content_text input[type="text"],
+.content_text input[type="email"],
+.content_text input[type="password"],
+.content_text textarea
 {
-	background: #e8e8e8;
-	border-radius: 5px;
+	background: #eeeeee;
 	padding: 0px 10px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	font-size: 0.75em;
 	width: 100%;
+	border: 1px solid #c8c8c8;
 }
 
-.content_text  input[type="text"],
-.content_text  input[type="email"],
-.content_text  input[type="password"] {
-	height: 23px;
+.content_text input[type="text"],
+.content_text input[type="email"],
+.content_text input[type="password"] {
+	height: 30px;
 }
 
 .content_text textarea {
 	height: 130px;
 }
 
-.content_text  button[type="submit"], .content_text  input[type="submit"] {
+.content_text button[type="submit"], .content_text input[type="submit"] {
 	height: 28px;
 	display: block;
 	text-align: center;
 	color: white;
-	background: #008584 ;
+	background: #475f77;
 	border:none;
-	font-size: 0.8em;
-	padding: 0px 10px;
-	font-family: Tahoma, Arial, sans-serif;
-	float:right;
+	font-size: 1em;
+	padding: 4px 15px;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	float: right;
 }
 
 
@@ -186,12 +186,11 @@
 }
 
 .content_text .styled_form .login_menu li a {
-	color: #32a8aa;
-	border-bottom: 2px solid #cde5e7;
+	color: #d74b4b;
 }
 
 .content_text .styled_form .login_menu li a:hover {
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .content_text em{
@@ -265,12 +264,12 @@ h3.debate_headline{
 }
 
 .debatte-score li.yes{
-	background-color: #008584;
+	background-color: #475f77;
 	color: #515151;
 }
 
 .debatte-score li.no{
-	background-color: #515151;
+	background-color: #d74b4b;
 	color: #00b4ff;
 }
 
@@ -339,7 +338,7 @@ p.rating_error{
 
 
 .community_ticker ul li {
-	padding: 0 0 0 25px;
+	padding: 0 0 0 40px;
 	margin-bottom: 10px;
 }
 

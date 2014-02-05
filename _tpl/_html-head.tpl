@@ -102,7 +102,7 @@
 
 
                     <div class="field_row row">
-                     <label for="l_field_password" class="span2">{{#email#}}</label>
+                     <label for="l_field_password" class="span2">{{#password#}}</label>
                      <div class="span3">
                        <input type="password" name="password">
                      </div>

@@ -5,6 +5,10 @@
 		border:none !important;
 	}
 
+	.container {
+		padding: 0px 10px;
+	}
+
 	#titlebar{
 		border-top: 3px solid #3298a7;
 	}
@@ -94,6 +98,8 @@
 	.article_content .span8 .article_side_element.align_right {
 		right: -124px;
 		margin-left: -114px;
+		padding: 30px;
+		background: #fff;
 	}
 
 	.article_content .span10 .article_side_element.align_left {
@@ -107,7 +113,7 @@
 	}
 
 	.news_item .thumbnail .caption  {
-		right: -120px;
+		right: -150px;
 	}
 }
 
@@ -131,6 +137,8 @@
 	.article_content .span8 .article_side_element.align_right {
 		right: -160px;
 		margin-left: -150px;
+		padding: 30px;
+		background: #fff;
 	}
 
 	.article_content .span10 .article_side_element.align_left {
@@ -144,7 +152,7 @@
 	}
 
 	.news_item .thumbnail .caption  {
-		right: -150px;
+		right: -180px;
 	}
 
 }
