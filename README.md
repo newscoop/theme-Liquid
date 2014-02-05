@@ -7,7 +7,7 @@ Theme Demo: http://liquid-dev.lab.sourcefabric.org/
 
 Theme Documentation: http://wiki.sourcefabric.org/x/NoAWAQ 
 
-Theme features: 
+Theme features include: 
 
 - Beautiful Magazine Style Design
 - Fully responsive, adjusts to different screen sizes
