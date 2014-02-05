@@ -1,4 +1,4 @@
-theme-liquid
+Liquid Theme - A liquid design theme for Newscoop
 ============
 
-Liquid Theme for Newscoop
+
