@@ -10,9 +10,9 @@
 {{ assign var="index" value=0 }}
 {{ foreach $users as $user }}
 
-<div class="article_content bloger content_text">
-  <div class="space_left_content">
-    <a href="{{ $view->url(['username' => $user->uname], 'user') }}">
+<div class="article_content bloger bloger_list content_text">
+  <div>
+    <a class="user_avatar" href="{{ $view->url(['username' => $user->uname], 'user') }}">
     {{if  $user->image(160, 200) }}
     <img src="{{ $user->image(160, 200) }}" class="thumbnail"  />
     {{else}}

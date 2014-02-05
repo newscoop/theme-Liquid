@@ -144,12 +144,15 @@
 	height: 30px;
 }
 
+.recaptchatable #recaptcha_response_field {
+	height: auto;
+}
+
 .content_text textarea {
 	height: 130px;
 }
 
 .content_text button[type="submit"], .content_text input[type="submit"] {
-	height: 28px;
 	display: block;
 	text-align: center;
 	color: white;
@@ -239,6 +242,13 @@ h3.debate_headline{
 	margin-right:10px;
 }
 
+.debate_author a {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.1em;
+	color: #d74b4b;
+	text-transform: uppercase;
+}
+
 .article_content .content_text .debate_author .debate_biography{
 
 	font-size:1em;
@@ -259,8 +269,8 @@ h3.debate_headline{
 
 .debatte-score li span{
 	padding:10px 20px;
-
 	display:block;
+	color: #fff;
 }
 
 .debatte-score li.yes{
@@ -349,7 +359,7 @@ li.registered, li.commented {
 }
 
 li.commented {
-	background-position: 2px -116px;
+	background-position: 2px -104px;
 }
 
 li.registered {
