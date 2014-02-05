@@ -1,5 +1,5 @@
 <!-- Orange Box -->
-<div class="orange_box people_box hidden-phone">
+<div class="slider_box people_box hidden-phone">
 
   <div class="people_wrapper row">
     <!-- People / Row (12) -->

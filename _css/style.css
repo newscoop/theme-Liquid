@@ -148,18 +148,18 @@ body {
 
 
 .cs_fl_left{
-    left: -160px;
-    margin-right: -150px;
     float: left;
     position: relative;
+    padding-right: 20px;
+    padding-bottom: 10px;
 }
 
 
 .cs_fl_right{
-    right: -160px;
-    margin-left: -150px;
     float: right;
     position: relative;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }
 
 .cs_img_caption{
