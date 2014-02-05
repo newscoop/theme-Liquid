@@ -2,18 +2,14 @@
 {{ include file="_tpl/_html-head.tpl" }}
 
 
+<div class="header_wrap">
+  <div class="container">
+    {{ include file="_tpl/header.tpl" }}
+  </div>
+</div>
+
 
 <div id="page" class="container">
-
-
-
-
-
-  {{ include file="_tpl/header.tpl" }}
-
-
-
-
 
   <!-- Content -->
   <section id="content">
@@ -37,18 +33,7 @@
        <!-- End Content -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-     </div>
+</div>
 
 
      {{ include file="_tpl/footer.tpl" }}

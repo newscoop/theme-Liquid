@@ -5,17 +5,14 @@
 {{ include file="_tpl/_html-head.tpl" }}
 
 
+<div class="header_wrap">
+  <div class="container">
+    {{ include file="_tpl/header.tpl" }}
+  </div>
+</div>
+
 
 <div id="page" class="container">
-
-
-
-
-
- {{ include file="_tpl/header.tpl" }}
-
-
-
 
 
  <!-- Content -->
@@ -27,25 +24,8 @@
    <p>Abone olduğunuz için teşekkürler.</p>
 </div>
 
-
-
-
-
-
-
 </section>
 <!-- End Content -->
-
-
-
-
-
-
-
-
-
-
-
 
 
 </div>
