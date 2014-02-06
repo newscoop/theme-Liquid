@@ -43,14 +43,13 @@
 
 	.bloger_news_items .news_item .content {
 		padding: 0px 20px 20px 20px;
+		margin-left: 0px;
 	}
-
 
 	.bloger_news_items .news_item .thumbnail {
 		float: none;
-		margin-right: 0;
+		margin: -30px -30px 0px -30px;
 	}
-
 
 	.news_item:after{
 
@@ -59,7 +58,19 @@
 		height: 0px;
 		clear: both;
 		visibility: hidden;
+	}
 
+	#top .top_content #logo {
+		margin: 0 auto;
+		float: none;
+	}
+
+	#top .top_content .add {
+		display: none;
+	}
+
+	.debate_author {
+		margin: 20px 0px;
 	}
 }
 
@@ -159,6 +170,12 @@
 		right: -180px;
 	}
 
+}
+
+@media (max-width: 979px) {
+	#top .top_content #logo {
+		margin-top: 20px;
+	}
 }
 
 
