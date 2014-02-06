@@ -10,7 +10,7 @@
         <div class="content content_text">
          {{ image rendition="section" }}
          <a href="{{url options="article"}}" class="thumbnail">
-           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"  class="thumbnail" />
+           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" />
          </a>
          {{/image}}
 

@@ -64,7 +64,7 @@
 <header id="top">
   <div class="top_content">
     <a href="http://{{ $gimme->publication->site }}" id="logo" title="{{ $gimme->publication->name }}"></a>
-    <a href="https://www.sourcefabric.org/en/about/jobs/" class="add">
+    <a target="_blank" href="https://www.sourcefabric.org/en/about/jobs/" class="add">
                   <img src="{{ url static_file='_img/ads/top.png' }}" alt="" />
                 </a>
    </div>
