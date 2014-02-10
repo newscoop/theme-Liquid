@@ -70,7 +70,7 @@
 	}
 
 	.debate_author {
-		margin: 20px 0px;
+		margin: 20px 0px !important;
 	}
 }
 
@@ -174,7 +174,7 @@
 
 @media (max-width: 979px) {
 	#top .top_content #logo {
-		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 }
 

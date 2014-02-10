@@ -14,16 +14,15 @@
 
 
 <li class="news_item">
-  <div class="content content_text">
 
-
-     {{ image rendition="section" }}
-     <a href="{{url options="article"}}" class="thumbnail">
-
+  {{ image rendition="section" }}
+    <a href="{{url options="article"}}" class="thumbnail">
       <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"   />
       {{ include file="_tpl/article_icons.tpl" }}
     </a>
-    {{/image}}
+  {{/image}}
+
+  <div class="content content_text">
 
     <h6 class="info">{{list_article_authors}}
      {{if $gimme->current_list->index!=1}},&nbsp;{{/if}}
