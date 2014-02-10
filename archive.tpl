@@ -9,7 +9,7 @@
 
 
                        <div class="bloger_news_items">
-                         <div class="space_left_content">
+                         <div>
                            <ul>
                             {{ list_issues order="bynumber desc" constraints="number greater 1" }}
 

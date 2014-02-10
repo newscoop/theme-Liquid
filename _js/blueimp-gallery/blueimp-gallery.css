@@ -92,6 +92,9 @@
 .blueimp-gallery > .slides > .slide-error > .slide-content {
   display: none;
 }
+
+/*
+
 .blueimp-gallery > .prev,
 .blueimp-gallery > .next {
   position: absolute;
@@ -121,6 +124,14 @@
   cursor: pointer;
   display: none;
 }
+
+*/
+
+.blueimp-gallery > .prev {
+  right: auto;
+  left: 15px;
+}
+
 .blueimp-gallery > .next {
   left: auto;
   right: 15px;
