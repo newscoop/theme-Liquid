@@ -225,6 +225,10 @@ border: #ccc solid 1px;
     margin-top: 10px;
 }
 
+.padding_bottom_10{
+    padding-bottom:10px;
+}
+
 .social_buttons{
     padding-top:15px;
 }
