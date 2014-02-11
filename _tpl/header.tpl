@@ -1,3 +1,5 @@
+<div class="header_wrap">
+  <div class="container">
 <!-- Titlebar -->
 <nav id="mobilemenu" class="visible-phone">
   <ul class="menu">
@@ -61,7 +63,7 @@
 <!-- End Titlebar -->
 
 <!-- Top -->
-<header id="top">
+<header id="top" class="padding_bottom_10">
   <div class="top_content">
     <a href="http://{{ $gimme->publication->site }}" id="logo" title="{{ $gimme->publication->name }}"></a>
     <a target="_blank" href="https://www.sourcefabric.org/en/about/jobs/" class="add">
@@ -71,7 +73,14 @@
 
  </header>
  <!-- End Top -->
+   </div>
+ </div>
 
+
+
+
+ <div class="menu_wrap">
+   <div class="container">
  <!-- Top Menu -->
  <nav id="top_menu" class="hidden-phone" >
   <ul class="menu">
@@ -93,16 +102,9 @@
 </nav>
 <!-- End Top Menu -->
 
-<!-- Outer Side Menu -->
-<nav id="outer_side_menu" class="visible-desktop">
-  <ul class="menu" >
 
-   {{ list_sections }}
-   <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{ #viewAllPosts# }} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
-   {{ /list_sections }}
- </ul>
-</nav>
-<!-- End Outer Side Menu -->
 
 {{/local}}
 
+  </div>
+</div>
