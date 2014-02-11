@@ -7,12 +7,12 @@
 
       {{ list_articles ignore_publication="true" ignore_issue="true" ignore_section="true" constraints="author is `$escapedName`"  order="ByPublishDate desc" length="5"  }}
       <li class="news_item">
+	     {{ image rendition="section" }}
+	     <a href="{{url options="article"}}" class="thumbnail">
+	       <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" />
+	     </a>
+	     {{/image}}
         <div class="content content_text">
-         {{ image rendition="section" }}
-         <a href="{{url options="article"}}" class="thumbnail">
-           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"  class="thumbnail" />
-         </a>
-         {{/image}}
 
          <h6 class="info">{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
           <h3 class="title"><a href="{{url options="article"}}">{{$gimme->article->title}}</a></h3>

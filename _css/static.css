@@ -162,11 +162,14 @@ margin-right: 0px;
 	color: #475f77;
 }
 
-#top_menu .menu > li > a:hover,
 #top_menu .menu > li.current > a,
 #top_menu .menu ul > li.current > a
 {
 	color: #d74b4b;
+}
+
+#top_menu .menu > li > a:hover {
+	color: #475f77;
 }
 
 #top_menu .menu li > ul {

@@ -409,3 +409,27 @@ li.registered {
 .image-slideshow .fullscreenButton:hover {
 	background-color: rgba(255, 255, 255, .4);
 }
+
+.blueimp-gallery > .prev {
+	position: absolute;
+	top: 50%;
+	margin-top: -21px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	width: 27px;
+	height: 42px;
+	text-indent: 9999px;
+	background-image: url(../_img/slide_prev.png);
+}
+
+.blueimp-gallery > .next {
+	position: absolute;
+	top: 50%;
+	margin-top: -21px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	width: 27px;
+	height: 42px;
+	text-indent: 9999px;
+	background-image: url(../_img/slide_next.png);
+}

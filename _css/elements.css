@@ -112,9 +112,6 @@
 	color: white;
 }
 
-
-
-
 .twitter_box {
 	border: 4px solid #68dbff;
 	position: relative;
@@ -214,7 +211,9 @@
 	text-decoration: none;
 }
 
-
+#commentform .form-element {
+	margin-bottom: 15px;
+}
 
 
 
@@ -460,7 +459,7 @@
 	background: #475f77;
 }
 
-.bloger_profile h3,  .bloger_profile p, .bloger_profile a {
+.article_content.bloger_profile h3, .article_content.bloger_profile p, .article_content.bloger_profile a {
 	color: #fff;
 }
 
@@ -478,6 +477,7 @@
 
 .bloger_news_items .news_item .content {
 	padding: 0px 20px 0px 0px;
+	margin-left: 20px;
 }
 
 .section {
@@ -556,10 +556,11 @@ min-height: 200px;
 	display: block;
 }
 
-
-
-
-
+.white-box {
+	padding: 30px;
+	background: #fff;
+	border: 1px solid #dcdcdc;
+}
 
 .pagination {
 	position: relative;
@@ -567,7 +568,6 @@ min-height: 200px;
 	height: 30px;
 	line-height: 30px;
 	margin: 10px 0px;
-	font-family: 'bentonsanscompregular';
 }
 
 .pagination .arrow {
@@ -578,25 +578,21 @@ min-height: 200px;
 	line-height: 30px;
 	background-repeat: no-repeat;
 	color: #666666;
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.4em;
+	text-transform: uppercase;
 }
 
 .pagination .arrow:hover {
-	color: #01a7a3;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .pagination .arrow.arrow_left {
 	left: 0px;
-	background-position: left center;
-	background-image: url(../_img/pagination_arrow_left.png);
-	padding-left: 20px;
 }
 
 .pagination .arrow.arrow_right {
 	right: 0px;
-	background-position: right center;
-	background-image: url(../_img/pagination_arrow_right.png);
-	padding-right: 20px;
 }
 
 .pagination ul {
@@ -605,7 +601,11 @@ min-height: 200px;
 }
 
 .pagination ul li {
+	font-family: 'Oswald', sans-serif;
+	font-size: 1.4em;
+	color: #d74b4b;
 	display: inline-block;
+	margin: 0px 2px;
 }
 
 .pagination ul li a {
@@ -613,13 +613,13 @@ min-height: 200px;
 }
 
 .pagination ul li a:hover {
-	color: #01a7a3;
+	text-decoration: underline;
 }
 
 .pagination ul li.current a {
-	font-size: 1.4em;
 	color: #d74b4b;
 	font-family: 'Oswald', sans-serif;
+	text-decoration: underline;
 }
 
 
