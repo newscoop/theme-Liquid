@@ -1,6 +1,9 @@
 {{extends file="layout.tpl"}}
 
 {{block content}}
+<div class="article_content bloger content_text white-box">
+  <div class="clearfix">
+
  <h3 class="normal_header">
  {{ #setNewPassword# }}
 </h3>
@@ -30,7 +33,7 @@
                 {{ /if }}
         </dl>
         <dl>
-                {{ $form->password_confirm->setLabel("Parolayı tekrar giriniz")->removeDecorator('Errors') }}
+                {{ $form->password_confirm->setLabel("{{ #retypePassword# }}")->removeDecorator('Errors') }}
                 {{ if $form->password_confirm->hasErrors() && !$form->password->hasErrors() }}
                 <dt class="info-block">&nbsp;</dt>
                 <dd class="info-block">
@@ -47,5 +50,7 @@
 
     </fieldset>
     </form>
+</div>
+</div>
 </div>
 {{/block}}
