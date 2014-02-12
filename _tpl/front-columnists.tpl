@@ -1,6 +1,7 @@
 <!-- Orange Box -->
-<div class="slider_box people_box hidden-phone row">
-
+<div class="row">
+<div class="slider_box people_box hidden-phone span12">
+<div class="row">
   <div class="people_wrapper span12">
     <!-- People / Row (12) -->
 
@@ -47,7 +48,7 @@
   <!-- End People / Row (12) -->
 
 </div>
-
+</div>
 <!-- Slider Navigation -->
 <ul class="navigation">
   <li class="arrow arrow_left"><a href="#"></a></li>
@@ -56,6 +57,6 @@
   <li class="arrow arrow_right"><a href="#"></a></li>
 </ul>
 <!-- End Slider Navigation -->
-
+</div>
 </div>
 <!-- End Orange Box -->

@@ -294,11 +294,12 @@
 
 .slider_box .people_wrapper {
 	overflow: hidden;
-	margin-left: 10px;
+
 }
 
 .people .person {
-
+	box-sizing: border-box;
+	padding:0 10px;
 }
 
 .people .person .header {
