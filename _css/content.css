@@ -233,7 +233,7 @@ h3.debate_headline{
 
 .debate_author{
 	background:#e8e8e8;
-	padding:15px ;
+	padding: 20px;
 }
 
 .debate_author figure{
@@ -247,6 +247,14 @@ h3.debate_headline{
 	font-size: 1.1em;
 	color: #d74b4b;
 	text-transform: uppercase;
+}
+
+.align_left.debate_author {
+	margin-right: 20px;
+}
+
+.align_right.debate_author {
+	margin-left: 20px;
 }
 
 .article_content .content_text .debate_author .debate_biography{
@@ -346,6 +354,12 @@ p.rating_error{
 	color: #d74b4b;
 }
 
+.poll-info {
+	background: #d74b4b;
+	padding: 10px;
+	color: #fff;
+	line-height: 1.2em;
+}
 
 .community_ticker ul li {
 	padding: 0 0 0 40px;
@@ -387,6 +401,15 @@ li.registered {
 .image-slideshow, .blueimp-gallery{
 	width:100%;
 	position: relative;
+}
+
+.blue_box.blue_box_posts .tabs_menu li.current a:after {
+	display: block;
+	width: 23px;
+	height: 10px;
+	content: " ";
+	background-image: url(../_img/current_tab.png);
+	margin: 0 auto;
 }
 
 #blueimp_fullscreen{

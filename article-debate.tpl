@@ -28,7 +28,7 @@
  <section id="content">
 
    <article class="row article_content">
-     <div class="news_item span8 offset2">
+     <div class="news_item span12">
 
 
 
