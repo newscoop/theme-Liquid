@@ -17,9 +17,8 @@
 
 {{ assign var="userindex" value=1 }}
 
-<div class="article_content bloger content_text">
+<div class="article_content bloger content_text white-box">
   <div class="clearfix">
-
 
 
 
