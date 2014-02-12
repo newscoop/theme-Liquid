@@ -47,6 +47,8 @@
   <a href="{{ $view->url(['controller' => 'register', 'action' => 'index'], 'default') }}" class="icon_link icon_padlock hidden-phone" id="registerButtonFront">{{ #Register# }}</a>
 
   <a href="#" class="icon_link icon_key open_login_popup hidden-phone">{{ #Login# }}</a>
+  {{else}}
+    <a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}" class="icon_link icon_key hidden-phone">{{ #logout# }}</a>
   {{/if}}
   {{/dynamic}}
 
