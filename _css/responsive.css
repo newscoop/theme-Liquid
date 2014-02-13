@@ -103,20 +103,6 @@
 		width: 156px !important;
 	}
 
-	.article_content .span8 .article_side_element.align_left {
-		left: -124px;
-		margin-right: -114px;
-		padding: 30px;
-		background: #fff;
-	}
-
-	.article_content .span8 .article_side_element.align_right {
-		right: -124px;
-		margin-left: -114px;
-		padding: 30px;
-		background: #fff;
-	}
-
 	.article_content .span10 .article_side_element.align_left {
 		left: -62px;
 		margin-right: -52px;

@@ -17,6 +17,7 @@
 	background: #fff;
 	border: 1px solid #dcdcdc;
 	padding: 20px;
+	margin-bottom: 20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
@@ -217,12 +218,9 @@
 }
 
 
-
-
-
 .grey_ad {
 	display: block;
-	margin-bottom: 20px;
+	margin: 20px -21px;
 }
 
 .grey_ad img {
@@ -232,7 +230,7 @@
 
 .slider_box {
 	background: #475f77;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 
 .slider_box .people {
@@ -322,7 +320,7 @@
 .people .person .header_field_2,
 .people .person .header_field_3
 {
-	line-height: 1.4em;
+	line-height: 1.2em;
 }
 
 .people .person .header_field_1 {
@@ -349,12 +347,16 @@
 .people .person .header_field_3 a {
 	color: #fff;
 	text-transform: uppercase;
+	font-size: 0.9em;
 }
 
 
 
 .article_content .news_item {
-	padding: 30px;
+	padding: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .article_content .article_side_element {
@@ -474,7 +476,7 @@
 }
 
 .bloger .text {
-	padding-left: 170px;
+	padding-left: 155px;
 }
 
 .bloger_news_items .news_item .content {
@@ -509,15 +511,18 @@
 
 .bloger_news_items .news_item .thumbnail {
 	float: left;
-	margin-right: 15px;
+	margin-right: 20px;
 }
 
 
 
 .columnist {
 	background: #fff;
-	padding: 30px;
+	padding: 20px;
 	border: 1px solid #dcdcdc;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .contact .contact_boxes {
@@ -559,7 +564,7 @@ min-height: 200px;
 }
 
 .white-box {
-	padding: 30px;
+	padding: 20px;
 	background: #fff;
 	border: 1px solid #dcdcdc;
 }

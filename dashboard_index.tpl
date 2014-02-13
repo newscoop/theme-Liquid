@@ -10,7 +10,7 @@ function afterRegistration() {
 }
 </script>
 <div class="article_content bloger content_text white-box">
-  <div class="space_left_content">
+  <div class="clearfix">
 
 <h3>{{ $user->name }}</h3>
 

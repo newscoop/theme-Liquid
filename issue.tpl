@@ -3,7 +3,7 @@
 
 {{block content}}
 <div class="bloger_news_items">
-  <div class="space_left_content">
+  <div>
 
 <h1>{{ $gimme->issue->name }}</h1>
 

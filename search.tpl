@@ -31,6 +31,14 @@
 
 
 
+                    <li class="news_item">
+                      {{ image rendition="section" }}
+                        <a href="{{url options="article"}}" class="thumbnail">
+                           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"  class="thumbnail" />
+                        </a>
+                      {{/image}}
+                        <div class="content content_text">
+
                             <h6 class="info">{{list_article_authors}}
             {{if $gimme->current_list->index!=1}},&nbsp;{{/if}}
 
