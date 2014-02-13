@@ -14,19 +14,18 @@
 
 
         <div class="bloger_news_items">
-          <div class="space_left_content">
+          <div class="clearfix">
                 <ul>
                     {{ list_search_results length="10"  ignore_issue="true" }}
+
+
                     <li class="news_item">
+                      {{ image rendition="section" }}
+                        <a href="{{url options="article"}}" class="thumbnail">
+                           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"  class="thumbnail" />
+                        </a>
+                      {{/image}}
                         <div class="content content_text">
-
-                          {{ image rendition="section" }}
-                          <a href="{{url options="article"}}" class="thumbnail">
-                             <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"  class="thumbnail" />
-                           </a>
-                          {{/image}}
-
-
 
                             <h6 class="info">{{list_article_authors}}
             {{if $gimme->current_list->index!=1}},&nbsp;{{/if}}

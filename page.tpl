@@ -12,7 +12,7 @@
 
 
    <div class="row article_content">
-       <div class="columnist span10 offset1">
+       <div class="columnist span12">
 
            <div class="content content_text">
 
