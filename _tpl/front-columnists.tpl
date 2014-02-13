@@ -1,9 +1,11 @@
 <!-- Orange Box -->
-<div class="slider_box people_box hidden-phone">
-
-  <div class="people_wrapper row">
+<div class="row">
+<div class="slider_box people_box hidden-phone span12">
+<div class="row">
+  <div class="people_wrapper span12">
     <!-- People / Row (12) -->
-    <ul class="people">
+
+    <ul class="people row">
       {{list_articles length="8" ignore_issue="true" constraints="section is 30" order="byPublishDate desc"}}
       <li class="span3">
         <div class="person content_text">
@@ -46,7 +48,7 @@
   <!-- End People / Row (12) -->
 
 </div>
-
+</div>
 <!-- Slider Navigation -->
 <ul class="navigation">
   <li class="arrow arrow_left"><a href="#"></a></li>
@@ -55,6 +57,6 @@
   <li class="arrow arrow_right"><a href="#"></a></li>
 </ul>
 <!-- End Slider Navigation -->
-
+</div>
 </div>
 <!-- End Orange Box -->

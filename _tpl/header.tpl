@@ -47,6 +47,16 @@
   <a href="{{ $view->url(['controller' => 'register', 'action' => 'index'], 'default') }}" class="icon_link icon_padlock hidden-phone" id="registerButtonFront">{{ #Register# }}</a>
 
   <a href="#" class="icon_link icon_key open_login_popup hidden-phone">{{ #Login# }}</a>
+
+<div class="logininfo" style="display:none">
+  <a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}" class="icon_link hidden-phone">{{ #myprofile# }}</a>
+
+    <a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}" class="icon_link icon_key hidden-phone">{{ #logout# }}</a>
+</div>
+  {{else}}
+  <a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}" class="icon_link hidden-phone">{{ #myprofile# }}</a>
+
+    <a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}" class="icon_link icon_key hidden-phone">{{ #logout# }}</a>
   {{/if}}
   {{/dynamic}}
 

@@ -182,10 +182,11 @@ $(document).ready(function() {
                     frm.find("input[type=email], input[type=password]").css("border", "1px solid red");
                 } else {
                     frm.css("display", "none");
-                    $("#logininfo").css("display", "block");
+                    $(".logininfo").css("display", "block");
                     $('#login_popup').fadeOut();
                     $("#cover").fadeOut();
                     $("#registerButtonFront").css("display", "none");
+                    $(".open_login_popup").css("display", "none");
                 }
             }
         });

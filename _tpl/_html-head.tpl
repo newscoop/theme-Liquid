@@ -83,7 +83,7 @@
                     </ul>
                     {{ else }}
 
-                    <ul id="logininfo" style="display:none">
+                    <ul class="logininfo" style="display:none">
                       <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">{{#dashboard#}}</a></li>
                       <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">{{#logout#}}</a></li>
                     </ul>
