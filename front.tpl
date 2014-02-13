@@ -1,11 +1,9 @@
 {{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
-<div class="header_wrap">
-  <div class="container">
+
     {{ include file="_tpl/header.tpl" }}
-  </div>
-</div>
+
 
 <div id="page" class="container">
 
@@ -131,7 +129,7 @@
 <!-- End Span (4) -->
 {{/if}}
 
-{{if $gimme->current_list->index==4}}
+{{/list_playlist_articles}}
 
 <div class="span4 sidebar hidden-phone">
 
@@ -145,83 +143,7 @@
 </div>
 <!-- End Row (12) -->
 
-<!-- Row (12) -->
-<div class="row">
 
-  <!-- Span (3) -->
-  <div class="span6">
-
-      <!-- News item -->
-      <article class="news_item">
-        {{ image rendition="front_big" }}
-        <a href="{{url options="article"}}" class="thumbnail">
-           {{ include file="_tpl/article_icons.tpl" }}
-           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
-       </a>
-       {{/image}}
-       {{ include file="_tpl/front_article_cont.tpl" }}
-   </article>
-   <!-- End News item -->
-
-</div>
-<!-- End Span (6) -->
-{{/if}}
-
-{{if $gimme->current_list->index==5}}
-<!-- Span (6) -->
-<div class="span6">
-
-
-
-  <!-- Row (6) -->
-  <div class="row">
-
-      <!-- Span (3) -->
-      <div class="span3">
-
-          <!-- News item -->
-          <article class="news_item margin_top">
-              {{ image rendition="front_small" }}
-              <a href="{{url options="article"}}" class="thumbnail">
-                  {{ include file="_tpl/article_icons.tpl" }}
-                  <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
-              </a>
-              {{/image}}
-              {{ include file="_tpl/front_article_cont.tpl" }}
-          </article>
-          <!-- End News item -->
-
-      </div>
-      <!-- End Span (3) -->
-      {{/if}}
-      {{if $gimme->current_list->index==6}}
-      <!-- Span (3) -->
-      <div class="span3">
-
-        <!-- News item -->
-        <article class="news_item margin_top">
-           {{ image rendition="front_small" }}
-           <a href="{{url options="article"}}" class="thumbnail">
-               {{ include file="_tpl/article_icons.tpl" }}
-               <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
-           </a>
-           {{/image}}
-           {{ include file="_tpl/front_article_cont.tpl" }}
-       </article>
-       <!-- End News item -->
-
-   </div>
-   <!-- End Span (3) -->
-
-</div>
-<!-- End Row (6) -->
-
-</div>
-<!-- End Span (6) -->
-{{/if}}
-{{/list_playlist_articles}}
-</div>
-<!-- End Row (12) -->
 
 
 {{ render file="_tpl/front-columnists.tpl"  issue=off section=off cache=2800}}
@@ -231,7 +153,7 @@
 
 
     {{list_playlist_articles id="1" }}
-    {{if $gimme->current_list->index>6}}
+    {{if $gimme->current_list->index>3}}
 
   {{if $gimme->article->highlight}}
   <div class="span6">

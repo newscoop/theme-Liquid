@@ -225,6 +225,10 @@ border: #ccc solid 1px;
     margin-top: 10px;
 }
 
+.padding_bottom_10{
+    padding-bottom:10px;
+}
+
 .social_buttons{
     padding-top:15px;
 }
@@ -251,30 +255,7 @@ input[type="radio"]{
     width:250px;
 }
 
-#newsletter-element,
-#attributes-gender-element,
-#attributes-gender-label,
-#attributes-birth_date-label,
-#attributes-birth_date-element,
-#attributes-organisation-label,
-#attributes-organisation-element,
-#attributes-website-label,
-#attributes-website-element,
-#attributes-facebook-label,
-#attributes-facebook-element,
-#attributes-google-label,
-#attributes-google-element,
-#attributes-geolocation-label,
-#attributes-geolocation-element,
-#attributes-email_public-label,
-#attributes-email_public-element,
-#attributes-first_name_public-label,
-#attributes-first_name_public-element,
-#attributes-last_name_public-label,
-#attributes-last_name_public-element
-{
-    display:none;
-}
+
 
 
 

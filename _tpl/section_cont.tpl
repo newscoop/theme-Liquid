@@ -2,7 +2,7 @@
 <div class="bloger_news_items">
   <div class="space_left_content">
     <ul>
-      {{ list_articles ignore_issue="true" ignore_section="false" order="byPublishDate desc" length="10"  }}
+      {{ list_articles ignore_issue="true" ignore_section="false" order="byPublishDate desc" length="10" constraints="type not poll" }}
 
 
       <li class="news_item">

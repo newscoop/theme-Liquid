@@ -34,6 +34,8 @@ galleryLinksOriginal = [];
 </div>
 <p class="slide-caption"></p>
 </div>
+
+
 <script>
 {{ /if }}
 
@@ -44,7 +46,7 @@ galleryLinksOriginal = [];
 galleryLinksOriginal.push({
 
    title: '{{$item->caption|escape }}',
-   href: '{{ $item->image->original }}',
+   href: '{{ $item->image->original_url }}',
    type: 'image/jpeg'
 
 });

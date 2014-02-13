@@ -10,7 +10,7 @@
 {{ list_sections }}
 <h2 class="title">{{ $gimme->section->name }}</h2>
 <ul>
-{{ list_articles }}
+{{ list_articles constraints="type not poll" }}
 
 
 <li class="news_item">

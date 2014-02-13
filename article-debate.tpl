@@ -4,11 +4,8 @@
 {{ include file="_tpl/_html-head.tpl" }}
 
 
-<div class="header_wrap">
-  <div class="container">
     {{ include file="_tpl/header.tpl" }}
-  </div>
-</div>
+
 
 
 <div id="page" class="container">
