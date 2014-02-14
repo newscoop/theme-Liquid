@@ -9,12 +9,20 @@
 		padding: 0px 10px;
 	}
 
-	#titlebar{
+	#titlebar {
 		border-top: 3px solid #d74b4b;
 	}
 
-	#top{
+	#top {
 		margin-bottom:10px;
+	}
+
+	#top .top_content {
+		margin-top: -20px;
+	}
+
+	.menu_wrap {
+		display: none;
 	}
 
 	.space_left_content {
@@ -131,7 +139,7 @@
 	.article_content .span8 .article_side_element.align_left {
 		left: -160px;
 		margin-right: -150px;
-		padding: 30px;
+		padding: 20px;
 		background: #fff;
 	}
 
