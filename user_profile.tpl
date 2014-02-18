@@ -18,12 +18,12 @@
       <p>{{ $user['bio']|escape }}</p>
       {{ /if }}
 
-      <p>
-        {{ if $user['facebook'] }}Facebook: <a target="_blank" href="http://www.facebook.com/{{ $user['facebook']|escape:url }}" rel="nofollow">{{ $user['facebook']|escape }}</a><br />{{ /if }}
-        {{ if $user['twitter'] }}Twitter: <a target="_blank" href="http://www.twitter.com/{{ trim($user['twitter'], '@')|escape:url }}" rel="nofollow">@{{ trim($user['twitter'], '@')|escape }}</a><br />{{ /if }}
-        {{ if $user['google'] }}Google+: <a target="_blank" href="http://plus.google.com/{{ $user['google']|escape:url }}" rel="nofollow">{{ $user['google']|escape }}</a><br />{{ /if }}
-        {{ if $user['organisation'] }}{{#organisation#}}: {{ $user['organisation']|escape }}<br />{{ /if }}
-        {{ if $user['website'] }}{{#Website#}}: <a target="_blank" href="http://{{ $user['website']|escape:url }}" rel="nofollow">{{ $user['website']|escape }}</a><br />{{ /if }}
+      <p class="user-info">
+        {{ if $user['facebook'] }}Facebook: <a target="_blank" class="info-text" href="http://www.facebook.com/{{ $user['facebook']|escape:url }}" rel="nofollow">{{ $user['facebook']|escape }}</a><br />{{ /if }}
+        {{ if $user['twitter'] }}Twitter: <a target="_blank" class="info-text" href="http://www.twitter.com/{{ trim($user['twitter'], '@')|escape:url }}" rel="nofollow">@{{ trim($user['twitter'], '@')|escape }}</a><br />{{ /if }}
+        {{ if $user['google'] }}Google+: <a target="_blank"  class="info-text" href="http://plus.google.com/{{ $user['google']|escape:url }}" rel="nofollow">{{ $user['google']|escape }}</a><br />{{ /if }}
+        {{ if $user['organisation'] }}{{#organisation#}}: <span class="info-text">{{ $user['organisation']|escape }}</span><br />{{ /if }}
+        {{ if $user['website'] }}{{#Website#}}: <a target="_blank" class="info-text" href="http://{{ $user['website']|escape:url }}" rel="nofollow">{{ $user['website']|escape }}</a><br />{{ /if }}
       </p>
 
       {{ if $user->logged_in }}

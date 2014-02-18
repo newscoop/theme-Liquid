@@ -3,7 +3,7 @@
 {{ if $gimme->article->comments_enabled || $gimme->article->comments_locked  }}
 
 <!-- Blue Box / Row -->
-<div class="blue_box blue_box_posts no_bg tabs_box padding_top_60">
+<div class="blue_box_posts no_bg tabs_box padding_top_60">
 
   <!-- Tabs Menu -->
 

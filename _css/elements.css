@@ -21,7 +21,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin-bottom:10px;
+	margin-bottom: 20px;
 }
 
 .news_item {
@@ -213,6 +213,10 @@
 	text-decoration: none;
 }
 
+.blue_box_posts .tabs_contents {
+	margin-top: 5px;
+}
+
 #commentform .form-element {
 	margin-bottom: 15px;
 }
@@ -366,12 +370,15 @@
 
 .article_content .article_side_element.align_left {
 	float: left;
-	margin-right:10px;
+	margin-right: 20px;
+
 }
 
 .article_content .article_side_element.align_right {
 	float: right;
-	margin-left:10px;
+
+	margin-left: 20px;
+
 }
 
 .article_content .article_side_element.article_side_image {
@@ -455,6 +462,7 @@
 
 .bloger .user_avatar img {
 	margin-top: -20px;
+	width: 155px;
 }
 
 .bloger_list {
@@ -478,7 +486,16 @@
 }
 
 .bloger .text {
-	padding-left: 155px;
+	padding-left: 175px;
+	margin-bottom: 20px;
+}
+
+.bloger_profile .user-info {
+	font-weight: bold;
+}
+
+.bloger_profile .info-text {
+	font-weight: normal;
 }
 
 .bloger_news_items .news_item .content {
