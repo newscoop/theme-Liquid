@@ -371,11 +371,14 @@
 .article_content .article_side_element.align_left {
 	float: left;
 	margin-right: 20px;
+
 }
 
 .article_content .article_side_element.align_right {
 	float: right;
+
 	margin-left: 20px;
+
 }
 
 .article_content .article_side_element.article_side_image {
@@ -675,7 +678,18 @@ min-height: 200px;
 
 
 
-
-
-
+.premium_label{
+	display: inline-block;
+	padding: .2em .6em .3em;
+	font-size: 75% !important;
+	font-weight: normal;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: baseline;
+	border-radius: .25em;
+	background: #d74b4b;
+	margin-bottom:9px;
+}
 

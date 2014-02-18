@@ -23,6 +23,11 @@
 	padding-left: 26px;
 }
 
+.icon_link.icon_lang {
+	background-image: url(../_img/icons/lang.png);
+	padding-left: 24px;
+}
+
 .content_text {
 	color: #606060;
 }
