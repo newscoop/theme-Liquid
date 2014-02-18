@@ -9,6 +9,14 @@
 		padding: 0px 10px;
 	}
 
+	#page {
+		margin-top: 20px;
+	}
+
+	.blue_box.blue_box_posts .tabs_menu li {
+		margin-bottom: 10px;
+	}
+
 	#titlebar {
 		border-top: 3px solid #d74b4b;
 	}
