@@ -12,7 +12,7 @@
           <header class="header">
            {{list_article_authors length="1"}}
 
-           {{ if $gimme->author->user->defined }}
+           {{ if $gimme->author->user->defined && $gimme->author->user->image(61, 82)}}
 
            <div class="thumbnail">
              <img alt="{{ $gimme->author->user->uname|escape }}" src="{{ $gimme->author->user->image(61, 82) }}"  />

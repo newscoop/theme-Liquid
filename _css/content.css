@@ -25,7 +25,9 @@
 
 .icon_link.icon_lang {
 	background-image: url(../_img/icons/lang.png);
-	padding-left: 24px;
+	padding-left: 34px;
+	border-left: 1px solid #e8e8e8;
+	background-position: 10px center;
 }
 
 .content_text {
