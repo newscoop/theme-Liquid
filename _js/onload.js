@@ -40,6 +40,8 @@ window.onload = function() {
 $(document).ready(function() {
 
 
+
+
     sticky_menu.init();
 
     /* mobile menu handlers */
@@ -181,12 +183,14 @@ $(document).ready(function() {
                 if (data == "ERROR") {
                     frm.find("input[type=email], input[type=password]").css("border", "1px solid red");
                 } else {
-                    frm.css("display", "none");
-                    $(".logininfo").css("display", "block");
-                    $('#login_popup').fadeOut();
-                    $("#cover").fadeOut();
-                    $("#registerButtonFront").css("display", "none");
-                    $(".open_login_popup").css("display", "none");
+                    // frm.css("display", "none");
+                    // $(".logininfo").css("display", "block");
+                    // $('#login_popup').fadeOut();
+                    // $("#cover").fadeOut();
+                    // $("#registerButtonFront").css("display", "none");
+                    // $(".open_login_popup").css("display", "none");
+                    document.location.reload();
+
                 }
             }
         });

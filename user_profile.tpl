@@ -37,7 +37,7 @@
 
 
 
-
+{{$user}}
 {{ include file="_tpl/user-content.tpl"  user=$user}}
 
 
