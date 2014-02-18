@@ -1,6 +1,6 @@
 {{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 <!-- Blue Box / Row -->
-<div class="blue_box blue_box_posts tabs_box padding_top_60">
+<div class="blue_box blue_box_posts tabs_box">
 
   <!-- Tabs Menu -->
   <ul class="tabs_menu">

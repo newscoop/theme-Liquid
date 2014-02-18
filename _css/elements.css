@@ -185,15 +185,16 @@
 
 .blue_box.blue_box_posts .tabs_menu {
 	font-family: 'Oswald', sans-serif;
-	position: absolute;
-	top: 0px;
-	left: 0px;
+	margin: -20px 0px 20px -20px;
+	float: left;
+	clear: both;
 }
 
 .blue_box.blue_box_posts .tabs_menu li {
 	font-size: 1.25em;
 	float: left;
 	margin-right: 10px;
+	display: inline-block;
 }
 
 .blue_box.blue_box_posts .tabs_menu li a {
@@ -296,7 +297,12 @@
 
 .slider_box .people_wrapper {
 	overflow: hidden;
+}
 
+.slider_box .people_wrapper h3 {
+	color: #fff;
+	margin-left: 20px;
+	margin-top: 10px;
 }
 
 .people .person {
@@ -338,6 +344,8 @@
 
 .people .person .header_field_2 {
 	color: #fff;
+
+	margin-top: 0px;
 }
 
 .people .person .header_field_2 a {

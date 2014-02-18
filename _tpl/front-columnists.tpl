@@ -3,6 +3,7 @@
 <div class="slider_box people_box hidden-phone span12">
 <div class="row">
   <div class="people_wrapper span12">
+  <h3>Editorial comments</h3>
     <!-- People / Row (12) -->
 
     <ul class="people row">
@@ -23,9 +24,6 @@
           </div>
           {{ /if }}
 
-
-
-          <h3 class="header_field_1">{{$gimme->author->aim}}</h3>
 
           <h3 class="header_field_2">{{ if $gimme->author->user->defined }}
             <a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">
