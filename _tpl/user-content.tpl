@@ -1,3 +1,5 @@
+{{$user}}
+
 {{ if $user->isAuthor() }}
 
 {{ $escapedName=str_replace(" ", "\ ", $user->author->name) }}
