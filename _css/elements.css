@@ -702,3 +702,9 @@ min-height: 200px;
 	margin-bottom:9px;
 }
 
+.EditorialCommentsText{
+	color:#fff;
+	margin-left:30px;
+	text-transform: none;
+	padding-top:5px;
+}
