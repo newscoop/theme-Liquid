@@ -216,6 +216,7 @@
 
 .blue_box_posts .tabs_contents {
 	margin-top: 5px;
+	clear:both;
 }
 
 #commentform .form-element {
