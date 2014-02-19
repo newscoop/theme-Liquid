@@ -1,29 +1,7 @@
 
 
-{{ include file="_tpl/_html-head.tpl" }}
-
-<div id="blueimp_fullscreen" class="blueimp-gallery blueimp-gallery-controls">
-    <div class="slides"></div>
-
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <ol class="indicator"></ol>
-    <div class="caption"></div>
-</div>
-
-
-
-
-    {{ include file="_tpl/header.tpl" }}
-
-<div id="page" class="container">
-
- <!-- Content -->
- <section id="content">
-
-   <article class="row article_content">
-     <div class="news_item span8 offset2">
+   <div class="row article_content">
+     <article class="news_item span8 ">
 
 
       {{* This is to check if article is divided into pages *}}
@@ -38,31 +16,13 @@
       <div class="thumbnail content_text">
 
        <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
-       <h6 class="caption span2">{{ $image->caption }}</h6>
+       <h6 class="caption ">{{ $image->caption }}</h6>
      </div>
      {{/image}}
      {{/if}}
 
      <div class="content content_text">
-       <h6 class="info">{{list_article_authors}}
-        {{if $gimme->current_list->index!=1}},&nbsp;{{/if}}
-        {{ if $gimme->author->user->defined }}
-        <a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">
-          {{ /if }}
-          {{ if $gimme->author->biography->first_name }}
-          {{ $gimme->author->biography->first_name }} {{
-          $gimme->author->biography->last_name }}
-          {{ else }}
-          {{ $gimme->author->name }}
-          {{ /if }}
-          {{ if $gimme->author->user->defined }}
-        </a>
-        {{ /if }}
-        {{if $gimme->current_list->at_end}}
-        &nbsp;-&nbsp;
-        {{/if}}
-        {{/list_article_authors}}
-        {{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
+       <h6 class="info">{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
         <h2 class="title">{{$gimme->article->name}}</h2>
         <h6 class="topics">
           {{ list_article_topics }}<a href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>{{ if $gimme->current_list->at_end }}</p>{{ else }}, {{ /if }}
@@ -72,7 +32,10 @@
         {{ include file="_tpl/_edit-article.tpl" }}
 
 
-        {{ if $gimme->article->content_accessible }}
+        {{ if !$gimme->article->content_accessible }}
+          <p>{{ #infoOnLockedArticles# }}</p>
+        {{ else }}
+
 
 
         {{ $bodyAr=explode("</p>", $gimme->article->full_text, 2) }}
@@ -81,74 +44,7 @@
         {{ $bodyAr[0] }}
       </p>
 
-      {{if $showStuff}}
-      {{ if $gimme->article->has_map }}
 
-
-      <div class="span4 article_side_element article_side_image align_left ">
-       {{ map show_original_map="false" show_reset_link="false" show_locations_list="false" width="240" height="214" }}
-     </div>
-     {{ /if }}
-     {{ if $gimme->article->has_attachments }}
-     <div class="span4 article_side_element align_left article_side_attachments">
-
-
-      <h3>{{#attachments#}}</h3>
-      {{ list_article_attachments }}
-
-
-
-      {{ if ($gimme->attachment->extension == mp3) || ($gimme->attachment->extension == oga) }}
-
-
-
-
-      <audio controls>
-        <source src="{{ url options="articleattachment" }}" type="{{ $gimme->attachment->mime_type }}">
-        </audio>
-
-
-
-
-
-        {{ elseif $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}
-
-        <video id="video_{{ $gimme->current_list->index }}" class="video-js vjs-default-skin" controls preload="auto" width="100%" data-setup='{ "loop": "false" }'>
-
-          <source src="{{ url options="articleattachment" }}" type='{{ $gimme->attachment->mime_type }}' />
-          </video>
-
-
-
-
-
-          {{ else }}
-
-
-          <a href="{{ url options="articleattachment" }}" class="attachment"><span>{{ $gimme->attachment->file_name }} ({{ $gimme->attachment->size_kb }}kb)</span></a>
-
-          {{ /if }}
-          {{ /list_article_attachments }}
-        </div>
-        {{ /if }}
-
-
-
-
-        {{ list_related_articles }}
-        {{if $gimme->current_list->at_beginning}}
-        <div class="span3 article_side_element related_articles align_right">
-         <h3 class="red_title">{{#relatedArticles#}}</h3>
-         <ul>
-           {{/if}}
-           <li><a href="{{url options="article"}}">{{$gimme->article->name}}</a></li>
-
-           {{if $gimme->current_list->at_end}}
-         </ul>
-       </div>
-       {{/if}}
-       {{/list_related_articles }}
-       {{/if}}
        {{ $bodyAr[1] }}
 
 
@@ -208,11 +104,13 @@
                     });
 
                     </script>
-                    <div class="row">
-                      <div class="span4">
-                        {{ include file="_tpl/article-rating.tpl" }}
-                      </div>
-                      <div class="span4">
+
+
+                    </div>
+
+                      <div class="rating_social">
+
+
                           <script src="{{ url static_file='_js/socialite.min.js' }}" type="text/javascript"></script>
 
 
@@ -231,45 +129,138 @@
                           </ul>
 
                         </div>
-
+                        {{ include file="_tpl/article-rating.tpl" }}
 
                       </div>
-                    </div>
+
                     <span class="clear"></span>
 
                     {{ include file="_tpl/article-comments.tpl" }}
 
 
 
-                    {{ else }}
-                    <p>{{ #infoOnLockedArticles# }}</p>
                     {{ /if }}
+
+                </article>
+                <aside class="span4 news_item">
+
+
+                       {{list_article_authors }}
+
+                       {{if $gimme->current_list->at_beginning}}
+                       <div class="article_authors">
+                        <h3>{{#writtenBy#}}</h3>
+                        {{/if}}
+                        <div class="author_item row">
+
+                       {{ if $gimme->author->user->image(60, 80) }}
+
+                       <a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}" class="author_image span1">
+                        <img alt="{{ $gimme->author->user->uname|escape }}" src="{{ $gimme->author->user->image(60, 80) }}"  />
+                      </a>
+                      {{ elseif $gimme->author->picture->imageurl }}
+
+                      <img src="{{ $gimme->author->picture->imageurl }}" alt="{{ $gimme->author->name }}" width="60" class="author_image span1"  />
+
+                      {{ /if }}
+                      <div class="span3 author_info">
+                      {{ if $gimme->author->user->defined }}
+                          <a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">
+                      {{ /if }}
+                        {{ if $gimme->author->biography->first_name }}
+                            {{ $gimme->author->biography->first_name }}
+                            {{$gimme->author->biography->last_name }}
+                        {{ else }}
+                            {{ $gimme->author->name }}
+                        {{ /if }}
+
+                        {{ if $gimme->author->user->defined }}
+                      </a>
+                      {{ /if }}
+                      <p>
+                        {{$gimme->author->biography->text}}
+                      </p>
+                    </div>
+                    </div>
+
+                    {{if $gimme->current_list->at_end}}
                   </div>
+                    {{/if}}
 
-                </div>
-              </article>
-
-
-              {{ render file="_tpl/box-most_tabs.tpl"  issue=off section=off cache=600 }}
+                      {{/list_article_authors}}
 
 
-            </section>
-            <!-- End Content -->
+                   {{ if $gimme->article->has_map }}
+
+
+                   <div class="article_side_image margin_top_30 ">
+                    {{ map show_original_map="false" show_reset_link="false" show_locations_list="false" width="240" height="214" }}
+                  </div>
+                  {{ /if }}
+
+
+                  {{ if $gimme->article->has_attachments }}
+                  <div class="margin_top_30 article_side_attachments">
+
+
+                   <h3>{{#attachments#}}</h3>
+                   {{ list_article_attachments }}
+
+
+                   <div class="attachment margin_top_30">
+                   {{ if ($gimme->attachment->extension == mp3) || ($gimme->attachment->extension == oga) }}
+
+
+
+
+                   <audio controls>
+                     <source src="{{ url options="articleattachment" }}" type="{{ $gimme->attachment->mime_type }}">
+                     </audio>
 
 
 
 
 
+                     {{ elseif $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}
+
+                     <video id="video_{{ $gimme->current_list->index }}" class="video-js vjs-default-skin" controls preload="auto" width="100%" data-setup='{ "loop": "false" }'>
+
+                       <source src="{{ url options="articleattachment" }}" type='{{ $gimme->attachment->mime_type }}' />
+                       </video>
 
 
 
 
 
+                       {{ else }}
+
+
+                      {{#download#}} <a href="{{ url options="articleattachment" }}" >{{ $gimme->attachment->file_name }} ({{ $gimme->attachment->size_kb }}kb)</a>
+
+                       {{ /if }}
+                     </div>
+                       {{ /list_article_attachments }}
+                     </div>
+                     {{ /if }}
 
 
 
-          </div>
 
+                     {{ list_related_articles }}
+                     {{if $gimme->current_list->at_beginning}}
+                     <div class="related_articles margin_top_30">
+                      <h3 >{{#relatedArticles#}}</h3>
+                      <ul>
+                        {{/if}}
+                        <li><a href="{{url options="article"}}">{{$gimme->article->name}}</a></li>
 
-          {{ include file="_tpl/footer.tpl" }}
-          {{ include file="_tpl/_html-foot.tpl" }}
+                        {{if $gimme->current_list->at_end}}
+                      </ul>
+                    </div>
+                    {{/if}}
+                    {{/list_related_articles }}
+
+                </aside>
+
+              </div>
+

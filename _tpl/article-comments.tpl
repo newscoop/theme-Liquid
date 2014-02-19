@@ -3,13 +3,13 @@
 {{ if $gimme->article->comments_enabled || $gimme->article->comments_locked  }}
 
 <!-- Blue Box / Row -->
-<div class="blue_box_posts no_bg tabs_box padding_top_60">
+<div class="content_text padding_top_60">
 
   <!-- Tabs Menu -->
 
 
         <!-- Tabs Content -->
-      <div class="tabs_content row">
+      <div class="tabs_content ">
 
         {{ list_article_comments order="bydate desc"  }}
         {{ if $gimme->current_list->at_beginning }}
