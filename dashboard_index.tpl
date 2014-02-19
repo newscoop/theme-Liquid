@@ -17,7 +17,7 @@ function afterRegistration() {
 <figure class="user-image threecol">
     {{ include file="_tpl/user-image.tpl" user=$user  size=big}}
 </figure>
-
+<a href="{{ $view->url(['username' => $user->uname], 'user') }}" class="button margin_top_10 margin_bottom_10">{{ #viewProfile# }}</a>
 
 
 <div class="register_form">

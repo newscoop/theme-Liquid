@@ -279,3 +279,6 @@ input[type="radio"]{
 
 
 
+#attributes-email_public-label, #attributes-email_public-element, #newsletter-label, #newsletter-element{
+    display:none;
+}

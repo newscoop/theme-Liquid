@@ -1,9 +1,11 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 <!-- Orange Box -->
 <div class="row">
 <div class="slider_box people_box hidden-phone span12">
 <div class="row">
+  <h3 class="EditorialCommentsText">{{#EditorialComments#}}</h3>
   <div class="people_wrapper span12">
-  <h3>Editorial comments</h3>
+
     <!-- People / Row (12) -->
 
     <ul class="people row">
@@ -13,7 +15,7 @@
           <header class="header">
            {{list_article_authors length="1"}}
 
-           {{ if $gimme->author->user->defined }}
+           {{ if $gimme->author->user->defined && $gimme->author->user->image(61, 82)}}
 
            <div class="thumbnail">
              <img alt="{{ $gimme->author->user->uname|escape }}" src="{{ $gimme->author->user->image(61, 82) }}"  />

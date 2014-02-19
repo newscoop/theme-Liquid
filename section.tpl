@@ -18,6 +18,10 @@
 
   </div>
 
+  <script src="{{ url static_file='_js/under_backbone.js' }}" type="text/javascript"></script>
+  <script src="{{ url static_file='_js/infiniteScroll/model_collection.js' }}" type="text/javascript"></script>
+  <script src="{{ url static_file='_js/infiniteScroll/views.js' }}" type="text/javascript"></script>
+  <script src="{{ url static_file='_js/infiniteScroll/app.js' }}" type="text/javascript"></script>
 
   {{ include file="_tpl/footer.tpl" }}
   {{ include file="_tpl/_html-foot.tpl" }}

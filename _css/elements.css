@@ -216,6 +216,7 @@
 
 .blue_box_posts .tabs_contents {
 	margin-top: 5px;
+	clear:both;
 }
 
 #commentform .form-element {
@@ -334,16 +335,17 @@
 }
 
 .people .person .header_field_1 {
-	color: #00b4ff;
+	color: #fff;
 	padding-bottom: 10px;
 }
 
 .people .person .header_field_1 a {
-	color: #00b4ff;
+	color: #fff;
 }
 
 .people .person .header_field_2 {
-	color: #03508c;
+	color: #fff;
+
 	margin-top: 0px;
 }
 
@@ -352,7 +354,7 @@
 }
 
 .people .person .header_field_3 {
-	color: #03508c;
+	color: #fff;
 }
 
 .people .person .header_field_3 a {
@@ -700,3 +702,9 @@ min-height: 200px;
 	margin-bottom:9px;
 }
 
+.EditorialCommentsText{
+	color:#fff;
+	margin-left:30px;
+	text-transform: none;
+	padding-top:5px;
+}
