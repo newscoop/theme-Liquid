@@ -129,9 +129,7 @@
 		margin-left: -52px;
 	}
 
-	.news_item .thumbnail .caption  {
-		right: -150px;
-	}
+
 }
 
 @media (min-width: 980px)  {
@@ -168,9 +166,6 @@
 		margin-left: -60px;
 	}
 
-	.news_item .thumbnail .caption  {
-		right: -180px;
-	}
 
 }
 

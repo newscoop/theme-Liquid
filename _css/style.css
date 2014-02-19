@@ -66,7 +66,7 @@ h3{
 
 .geo_map_mapcanvas, .geomap_container{
     width:100% !important;
-    margin-top:10px;
+
 }
 
 .geomap_open_large_map{
@@ -223,6 +223,14 @@ border: #ccc solid 1px;
 
 .margin_top_10{
     margin-top: 10px;
+}
+
+.margin_top_20{
+    margin-top: 20px;
+}
+
+.margin_top_30{
+    margin-top: 30px;
 }
 
 .padding_bottom_10{
