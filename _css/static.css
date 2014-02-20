@@ -9,20 +9,19 @@
 
 }
 
-.menu_wrap{
+.menu_wrap {
 	background: #fff;
 	width: 100%;
-	-webkit-box-shadow: 0 9px 9px 0px rgba(220, 220, 220, 0.7);
-	-moz-box-shadow: 0 9px 9px 0px rgba(220, 220, 220, 0.7);
-	box-shadow: 0 9px 9px 0px rgba(220, 220, 220, 0.7);
+	-webkit-box-shadow: 0 9px 9px 0px rgba(0, 0, 0, 0.06);
+	-moz-box-shadow: 0 9px 9px 0px rgba(0, 0, 0, 0.06);
+	box-shadow: 0 9px 9px 0px rgba(0, 0, 0, 0.06);
 	border-bottom: 1px solid #d6d6d6;
 	left: 0;
 	top: 153px;
 	z-index:1999;
-
 }
 
-.menu_fixed{
+.menu_fixed {
 	position:fixed;
 	top:0;
 }
