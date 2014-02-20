@@ -707,6 +707,7 @@ min-height: 200px;
 	margin-left:30px;
 	text-transform: none;
 	padding-top:5px;
+	text-transform: uppercase;
 }
 
 .article_content .news_item .thumbnail{
@@ -723,23 +724,26 @@ audio, video{
 }
 
 .author_item{
-	margin-top:20px;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 .author_info{
 	width:178px ;
 }
 
 .article_content .author_info a{
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
 	color:#475f77;
 	text-transform: uppercase;
 	line-height:1em;
-	font-size:1em;
+	font-size:1.1em;
 	display:block;
 	margin-bottom:5px;
 }
 
 .author_info p{
-	line-height: 1.2em;
-	font-size: 0.85em;
+	line-height: 1.4em;
+	font-size: 0.9em;
 	color: #606060;
 }

@@ -25,9 +25,7 @@
 
 .icon_link.icon_lang {
 	background-image: url(../_img/icons/lang.png);
-	padding-left: 34px;
-	border-left: 1px solid #e8e8e8;
-	background-position: 10px center;
+	padding-left: 24px;
 }
 
 .content_text {
@@ -70,7 +68,7 @@
 }
 
 .content_text h3.bigger {
-	font-size: 2em;
+	font-size: 1.6em;
 }
 
 .content_text h4 {
@@ -366,6 +364,13 @@ p.rating_error{
 	padding: 10px;
 	color: #fff;
 	line-height: 1.2em;
+}
+
+.errors {
+	padding: 10px;
+	color: #d74b4b;
+	line-height: 1.2em;
+	display: inline-block;
 }
 
 .community_ticker ul li {

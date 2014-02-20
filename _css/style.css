@@ -58,6 +58,10 @@ h3{
     color:inherit;
 }
 
+.article_content .topics a {
+    font-weight: bold;
+}
+
 .fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe, .fb_like_box {
     width: 100% !important;
 }
@@ -163,8 +167,9 @@ body {
 }
 
 .cs_img_caption{
-    color: #ABABAB;
-    font-size: 0.625em !important;
+    font-style: italic;
+    font-size: 0.725em !important;
+    color: #606060;
 }
 
 #thumbs{
