@@ -9,7 +9,7 @@
     <!-- People / Row (12) -->
 
     <ul class="people row">
-      {{list_articles length="8" ignore_issue="true" constraints="section is 30" order="byPublishDate desc"}}
+     {{list_playlist_articles id="2" length="8"}}
       <li class="span3">
         <div class="person content_text">
           <header class="header">
@@ -43,7 +43,7 @@
         <p>{{$gimme->article->deck|strip_tags|truncate:200:"...":false}}</p>
       </div>
     </li>
-    {{/list_articles}}
+    {{/list_playlist_articles}}
 
   </ul>
   <!-- End People / Row (12) -->
