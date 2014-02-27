@@ -193,21 +193,21 @@
                    {{ if $gimme->article->has_map }}
 
 
-                   <div class="article_side_image margin_top_30 ">
+                   <div class="article_side_image margin_top_20 ">
                     {{ map show_original_map="false" show_reset_link="false" show_locations_list="false" width="240" height="214" }}
                   </div>
                   {{ /if }}
 
 
                   {{ if $gimme->article->has_attachments }}
-                  <div class="margin_top_30 article_side_attachments">
+                  <div class="margin_top_20 article_side_attachments">
 
 
                    <h3>{{#attachments#}}</h3>
                    {{ list_article_attachments }}
 
 
-                   <div class="attachment margin_top_30">
+                   <div class="attachment margin_top_20">
                    {{ if ($gimme->attachment->extension == mp3) || ($gimme->attachment->extension == oga) }}
 
 
@@ -248,7 +248,7 @@
 
                      {{ list_related_articles }}
                      {{if $gimme->current_list->at_beginning}}
-                     <div class="related_articles margin_top_30">
+                     <div class="related_articles margin_top_20">
                       <h3 >{{#relatedArticles#}}</h3>
                       <ul>
                         {{/if}}
