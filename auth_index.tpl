@@ -1,4 +1,4 @@
-{{if $smarty.post.ajax }}
+{{if isset($smarty.post.ajax) }}
 {{ if $form->isErrors() }}ERROR{{/if}}
 {{else}}
 {{ config_load file="{{ $gimme->language->english_name }}.conf" }}

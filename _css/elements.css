@@ -67,7 +67,10 @@
 
 .news_item .thumbnail img {
 	display: block;
+
 }
+
+
 
 .news_item .thumbnail .caption {
 	padding:12px 20px 0 20px;
@@ -351,6 +354,7 @@
 
 .people .person .header_field_2 a {
 	color: #fff;
+	font-size:0.9em;
 }
 
 .people .person .header_field_3 {

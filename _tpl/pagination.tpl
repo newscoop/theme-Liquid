@@ -39,7 +39,7 @@
   <ul>
 
   {{if $firstToShow>1}}
-  <li class="firstlast"><a href="{{ url options="section" }}{{if $gimme->topic->identifier}}?tpid={{$gimme->topic->identifier}}{{/if}}">1</a></li>
+  <li class="firstlast"><a href="{{ url options="section" }}{{if $gimme->topic->identifier}}?tpid={{$gimme->topic->identifier}}{{/if}}{{if isset($smarty.get.tpl)}}&tpl={{$smarty.get.tpl}}{{/if}}">1</a></li>
   <li class="firstlast">...</li>
   {{/if}}
   {{section name=foo start=$firstToShow loop=$lastToShow}}
@@ -49,14 +49,14 @@
         <li class="current"><a>{{ $smarty.section.foo.index }}</a></li>
 
     {{else}}
-        <li><a href="{{ url options="section" }}?{{$list_id}}={{ ($smarty.section.foo.index-1)*$listLength }}{{if $gimme->topic->identifier}}&tpid={{$gimme->topic->identifier}}{{/if}}">
+        <li><a href="{{ url options="section" }}?{{$list_id}}={{ ($smarty.section.foo.index-1)*$listLength }}{{if $gimme->topic->identifier}}&tpid={{$gimme->topic->identifier}}{{/if}}{{if isset($smarty.get.tpl)}}&tpl={{$smarty.get.tpl}}{{/if}}">
         {{ $smarty.section.foo.index }} </a></li>
     {{/if}}
   {{/section}}
 
   {{if $lastToShow-1<$allPages}}
   <li class="firstlast">...</li>
-  <li class="firstlast"><a href="{{ url options="section" }}?{{$list_id}}={{ ($allPages-1)*$listLength }}{{if $gimme->topic->identifier}}&tpid={{$gimme->topic->identifier}}{{/if}}">{{$allPages}}</a></li>
+  <li class="firstlast"><a href="{{ url options="section" }}?{{$list_id}}={{ ($allPages-1)*$listLength }}{{if $gimme->topic->identifier}}&tpid={{$gimme->topic->identifier}}{{/if}}{{if isset($smarty.get.tpl)}}&tpl={{$smarty.get.tpl}}{{/if}}">{{$allPages}}</a></li>
   {{/if}}
 
     </ul>

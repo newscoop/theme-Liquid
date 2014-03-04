@@ -10,7 +10,7 @@
 
   <!-- Content -->
   <section id="content">
-
+<h1>{{$gimme->topic->name}}</h1>
 
 {{ render file="_tpl/topic_cont.tpl" params=$gimme->url->get_parameter("ls-art0") }}
 

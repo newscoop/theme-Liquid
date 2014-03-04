@@ -132,7 +132,7 @@
 
 }
 
-@media (min-width: 980px)  {
+@media (min-width: 980px) and (max-width: 1199px ) {
 
 	.orange_box .people .span3 {
 		width: 214px !important;
@@ -175,6 +175,26 @@
 	}
 }
 
+@media (min-width: 1200px) {
+
+	.EditorialCommentsText{
+		margin-left:40px;
+	}
+
+	.blue_box.blue_box_posts .span3 {
+		width: 260px !important;
+	}
+
+}
+
+@media (min-width: 500px) {
+
+	.news_item .thumbnail img.small {
+
+		max-width:230px;
+	}
+
+}
 
 #mobilemenu{
 	background: #475f77;

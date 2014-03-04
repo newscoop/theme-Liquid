@@ -10,12 +10,12 @@
       </li>
       {{/if}}
       <li class="news_item">
-        <div class="content content_text">
+        <div class="content content_text no_margin_left">
 
           {{ image rendition="section" }}
           <a href="{{url options="article"}}" class="thumbnail">
 
-           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"   />
+           <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"   class="small"/>
            {{ include file="_tpl/article_icons.tpl" }}
          </a>
          {{/image}}

@@ -9,17 +9,14 @@
 
   <!-- Content -->
   <section id="content">
-    {{dynamic}}
-    {{list_playlist_articles id="2" length="1"}}
-    <h1 class="main_title"><a href="{{url options="article"}}">{{$gimme->article->name}}</a></h1>
-    {{/list_playlist_articles}}
+
     <!-- Row (12) -->
     <div class="row">
 
       <!-- Span (8) -->
       <div class="span8">
 
-        {{list_playlist_articles id="1" length="6"}}
+        {{list_playlist_articles id="1" length="3"}}
 
 
         <!-- News item  -->
@@ -147,7 +144,7 @@
 
 <a target="_blank" href="http://www.sourcefabric.org/" class="grey_ad hidden-phone"><img src="{{ url static_file='_img/ads/300x250.png' }}" alt="" /></a>
 
-{{ render file="_tpl/front-poll.tpl"  issue=off section=off cache=4400 }}
+{{* render file="_tpl/front-poll.tpl"  issue=off section=off cache=4400 *}}
 </div>
 </div>
 <!-- End Row (12) -->
@@ -191,7 +188,7 @@
 {{/if}}
 {{/if}}
 {{/list_playlist_articles}}
-{{/dynamic}}
+
 
 </div>
 <!-- End Row (12) -->
