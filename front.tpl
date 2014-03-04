@@ -139,7 +139,7 @@
 
 <div class="span4 sidebar hidden-phone">
 
-{{* render file="_tpl/community-feed.tpl"  issue=off section=off cache=400 *}}
+{{ render file="_tpl/community-feed.tpl"  issue=off section=off cache=400 }}
 
 
 <a target="_blank" href="http://www.sourcefabric.org/" class="grey_ad hidden-phone"><img src="{{ url static_file='_img/ads/300x250.png' }}" alt="" /></a>
