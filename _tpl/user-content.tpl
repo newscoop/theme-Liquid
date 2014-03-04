@@ -11,7 +11,7 @@
       <li class="news_item">
 	     {{ image rendition="section" }}
 	     <a href="{{url options="article"}}" class="thumbnail">
-	       <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" />
+	       <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" class="small" />
 	     </a>
 	     {{/image}}
         <div class="content content_text">
