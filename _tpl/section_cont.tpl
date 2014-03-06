@@ -1,45 +1,56 @@
 {{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 
-    <div class="row" id="masonry_container">
+<script type="text/template" id="item-template">
 
 
-       {{ list_articles ignore_issue="true" ignore_section="false" order="byPublishDate desc" length="10" constraints="type not poll" }}
+     <article class="news_item">
 
-      {{if $gimme->article->highlight}}
-      <div class="span6">
-          <article class="news_item">
-              {{ image rendition="front_big" }}
-              <a href="{{url options="article"}}" class="thumbnail">
-                 {{ include file="_tpl/article_icons.tpl" }}
-                 <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
-             </a>
-             {{/image}}
-             {{ include file="_tpl/front_article_cont.tpl" }}
-         </article>
-     </div>
-     {{else}}
-     <div class="span3">
-        <article class="news_item">
-         {{ image rendition="front_small" }}
-         <a href="{{url options="article"}}" class="thumbnail">
-            {{ include file="_tpl/article_icons.tpl" }}
-            <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
+     <% var rendition = false;
+     if (item.get('fields').highlight=="1"){
+        rendition = item.getRendition("front_big");
+     }else{
+      rendition = item.getRendition("front_small");
+     }
+      rendition = decodeURIComponent(rendition) ;
+      if(rendition){
+     %>
+
+         <a href="<%= item.get('number') %>" class="thumbnail">
+
+            <img src="//<%= rendition %>"  alt="here should be a caption" class="loading" />
         </a>
-        {{/image}}
-        {{ include file="_tpl/front_article_cont.tpl" }}
+
+        <% } %>
+
+                <div class="content content_text">
+
+                            <h6 class="info">
+                            <%  var d = new Date(item.get('published'));
+                                var day = d.getDate();
+                                var month = d.getMonth() + 1; //Months are zero based
+                                var year = d.getFullYear();
+                                var hours = d.getHours();
+                                var min = d.getMinutes();
+                                print( ('0'+ day).slice(-2) + "." + ('0'+month).slice(-2) + "." + year+", "+('0'+hours).slice(-2)+":"+('0'+min).slice(-2));
+                            %>
+                            </h6>
+
+                    <h3 class="title"><a href="<%= item.get('number') %>"> <%= item.get('title') %></a></h3>
+
+                    <p> <%= item.get('fields').deck.replace(/^(.{200}[^\s]*).*/, "$1")  %></p>
+                </div>
+
+
+
     </article>
-    </div>
-    {{/if}}
-
-
-      {{if $gimme->current_list->at_end}}
 
 
 
-    </div>
+</script>
 
 
-{{ include file="_tpl/pagination.tpl" }}
-{{/if}}
 
-{{/list_articles}}
+<div class="row" id="masonry_container">
+
+</div>
+<button id="load_more">load more</button>

@@ -16,7 +16,7 @@
         {{ $class = "" }}
     {{ /if }}
 
-    {{ if $user->is_active && $user->image }}
+    {{ if $user->is_active && $user->image($box, $box) }}
     <img alt="{{ $user->uname|escape }}" src="{{ $user->image($box, $box) }}" class="{{ $class|escape }}" />
     {{ else }}
     <img alt="{{ $user->uname|escape }}" src="{{ url static_file="_img/user-thumb-`$size`-default.jpg" }}" class="{{ $class|escape }}" />

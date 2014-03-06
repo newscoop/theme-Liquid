@@ -190,6 +190,9 @@
                       {{/list_article_authors}}
 
 
+                        <img style="margin: 20px auto 0 auto; display:block;" src="{{url static_file="_img/ads/300x250.png"}}" alt="Sourcefabric"/>
+
+
                    {{ if $gimme->article->has_map }}
 
 
