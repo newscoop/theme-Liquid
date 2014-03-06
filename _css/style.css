@@ -299,3 +299,33 @@ input[type="radio"]{
 .no_margin_left{
     margin-left:0 !important;
 }
+
+
+/* Progress JS. Used on section pages */
+
+.progressjs-inner {
+    width: 0;
+}
+.progressjs-progress {
+    z-index: 9999999;
+}
+
+/* blue theme, like iOS 7 progress bar */
+.progressjs-theme-blue .progressjs-inner {
+    height: 3px;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    background-color: #d74b4b;
+}
+.progressjs-theme-blue.progressjs-end {
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+.progressjs-theme-blue .progressjs-percent {
+    display: none;
+}

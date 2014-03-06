@@ -46,7 +46,7 @@ galleryLinksOriginal = [];
 galleryLinksOriginal.push({
 
    title: '{{$item->caption|escape }}',
-   href: '{{ $item->image->original_url }}',
+   href: '{{ $item->image->original }}',
    type: 'image/jpeg'
 
 });

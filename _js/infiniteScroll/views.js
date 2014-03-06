@@ -55,6 +55,7 @@ window.listView = Backbone.View.extend({
         });
 
         this.collection.nextPageLink = '/api/sections/'+section_number+'/'+lang+'/articles?sort[published]=desc';
+
             this.collection.fetch({reset: true}).complete(function(){
 
 
@@ -108,6 +109,7 @@ window.listView = Backbone.View.extend({
                     $("div.new").fadeIn().removeClass("new");
 
                     that.$el.masonry('reload');
+                    progressJs().end();
                 }
             });
 
@@ -123,6 +125,8 @@ window.listView = Backbone.View.extend({
 
     loadMoreClickHandler: function () {
         self = this;
+        progressJs().start();
+        progressJs().autoIncrease(4, 400);
             this.collection.fetch({reset: true}).complete(function(){
 
 

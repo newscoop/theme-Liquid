@@ -185,6 +185,11 @@
 		width: 260px !important;
 	}
 
+	.news_item {
+	margin-bottom: 30px;
+	}
+
+
 }
 
 @media (min-width: 500px) {

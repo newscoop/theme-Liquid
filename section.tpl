@@ -22,6 +22,8 @@
 var section_number = {{$gimme->section->number}};
 var lang = '{{ $gimme->language->code }}';
 </script>
+
+<script src="{{ url static_file='_js/infiniteScroll/progress.min.js' }}" type="text/javascript"></script>
   <script src="{{ url static_file='_js/under_backbone.js' }}" type="text/javascript"></script>
   <script src="{{ url static_file='_js/infiniteScroll/model_collection.js' }}" type="text/javascript"></script>
   <script src="{{ url static_file='_js/infiniteScroll/views.js' }}" type="text/javascript"></script>

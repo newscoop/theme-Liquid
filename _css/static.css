@@ -355,8 +355,26 @@ margin-right: 0px;
 
 #load_more{
 	display:none;
+	background:transparent;
+	border: 1px solid;
+	border-color:#d3d3d3;
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	color: #d3d3d3;
+	padding:10px 40px;
+	margin:10px auto;
+	outline:none;
+	-webkit-transition: color 0.4s, border-color 0.4s;
+	-moz-transition: color 0.4s, border-color 0.4s ;
+	-o-transition: color 0.4s , border-color 0.4s;
+	transition: color 0.4s , border-color 0.4s;
+
 }
 
+#load_more:hover{
+	color:#333;
+	border-color:#333;
+}
 
 
 
