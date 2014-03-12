@@ -73,19 +73,19 @@
                 <div class="content content_text">
                   {{dynamic}}
                   <h3 class="popup_title bigger">{{ if $gimme->user->logged_in }}
-                    {{#welcome#}} {{$gimme->user->name}}
-                    {{else}}{{#login#}}{{/if}}</h3>
+                    {{'welcome'|translate}} {{$gimme->user->name}}
+                    {{else}}{{'login'|translate}}{{/if}}</h3>
                   <div class="styled_form login_form">
                     {{ if $gimme->user->logged_in }}
                     <ul>
-                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">{{#dashboard#}}</a></li>
-                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">{{#logout#}}</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">{{'dashboard'|translate}}</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">{{'logout'|translate}}</a></li>
                     </ul>
                     {{ else }}
 
                     <ul class="logininfo" style="display:none">
-                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">{{#dashboard#}}</a></li>
-                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">{{#logout#}}</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}">{{'dashboard'|translate}}</a></li>
+                      <li><a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}">{{'logout'|translate}}</a></li>
                     </ul>
 
                     <form name="login" action="/auth" method="post" id="loginform">
@@ -93,7 +93,7 @@
 
 
                      <div class="field_row row">
-                       <label for="l_field_login" class="span2">{{#email#}}</label>
+                       <label for="l_field_login" class="span2">{{'email'|translate}}</label>
                        <div class="span3">
                         <input type="email" name="email" >
                         <input type="hidden" name="ajax" value="1" />
@@ -102,7 +102,7 @@
 
 
                     <div class="field_row row">
-                     <label for="l_field_password" class="span2">{{#password#}}</label>
+                     <label for="l_field_password" class="span2">{{'password'|translate}}</label>
                      <div class="span3">
                        <input type="password" name="password">
                      </div>
@@ -111,10 +111,10 @@
                    <div class="field_row row">
                      <div class="span3 offset2">
                        <ul class="login_menu float_left">
-                         <li><a href="/auth/password-restore">{{#forgotPassword#}}</a></li>
-                         <li><a href="/register">{{#Register#}}</a></li>
+                         <li><a href="/auth/password-restore">{{'forgotPassword'|translate}}</a></li>
+                         <li><a href="/register">{{'Register'|translate}}</a></li>
                        </ul>
-                       <input type="submit"  value="{{#Login#}}" class="float_right">
+                       <input type="submit"  value="{{'Login'|translate}}" class="float_right">
 
 
                      </div>

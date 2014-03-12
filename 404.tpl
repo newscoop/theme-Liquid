@@ -7,7 +7,8 @@
 
 
 <p>
-    {{#sorryNoFound#}}
+    {{ 'sorryNoFound'|translate }}
+
 
 </p>
 

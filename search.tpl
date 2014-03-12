@@ -1,4 +1,4 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
+
 
 
 {{ include file="_tpl/_html-head.tpl" }}
@@ -74,7 +74,7 @@
 
         {{ if $gimme->prev_list_empty }}
 
-          <p>{{#noSearchResults#}}</p>
+          <p>{{'noSearchResults'|translate}}</p>
         {{ /if }}
 
     </section>

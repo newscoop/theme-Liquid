@@ -1,6 +1,6 @@
 
 <div class="article_rating">
-    <h3>{{#articleRating#}}</h3>
+    <h3>{{'articleRating'|translate}}</h3>
     <div id="{{ $gimme->article->number }}" class="rate_widget">
         <ul class="stars">
             <li class="star_1 ratings_stars"></li>
@@ -9,7 +9,7 @@
             <li class="star_4 ratings_stars"></li>
             <li class="star_5 ratings_stars"></li>
         </ul>
-        <p class="total_votes">{{ #voteData# }}</p>
+        <p class="total_votes">{{'voteData'|translate}}</p>
         <p class="rating_error"></p>
     </div>
 </div>
@@ -85,7 +85,7 @@ function set_votes(widget) {
 
         $(widget).find('.star_' + avg).prevAll().andSelf().addClass('ratings_vote');
         $(widget).find('.star_' + avg).nextAll().removeClass('ratings_vote');
-        $(widget).find('.total_votes').text(votes + ' {{ #voteS# }} {{ #averageRating# }} ' + exact);
+        $(widget).find('.total_votes').text(votes + ' {{'voteS'|translate}} {{'averageRating'|translate}} ' + exact);
         $(widget).find('.rating_error').text(error);
     }
 }

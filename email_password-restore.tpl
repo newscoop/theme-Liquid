@@ -1,9 +1,9 @@
 
-Hello,
+{{'hello'|translate}}
 
-reset your password by clicking on the link below:
+{{'resetPassRestoreMessage'|translate}}
 
 http://{{ $publication }}{{ $view->url(['controller' => 'auth', 'action' => 'password-restore-finish', 'user' => $user, 'token' => $token], 'default') }}
 
-Thanks!
-{{ $view->placeholder('subject')->set(sprintf("Restore password at %s", $site)) }}
+{{'thanks'|translate}}
+{{ $view->placeholder('subject')->set(sprintf("{{'restorePasswordAt'|translate}} %s", $site)) }}

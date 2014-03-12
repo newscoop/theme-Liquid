@@ -1,5 +1,3 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
-
 
 
 {{ if $gimme->article->type_name=="page"}}

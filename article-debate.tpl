@@ -70,7 +70,7 @@
                                   <figure>
                                 <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
                                   </figure>
-                                  <h5>{{ #proArgumentsBy# }}</h5>
+                                  <h5>{{'proArgumentsBy'|translate}}</h5>
                                   <p>{{ if $gimme->author->user->defined }}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p>
                                   <p class="debate_biography">{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
 
@@ -91,7 +91,7 @@
                                       <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
                                       {{ /if }}
                                         </figure>
-                                        <h5>{{ #contraArgumentsBy# }}</h5>
+                                        <h5>{{'contraArgumentsBy'|translate}}</h5>
                                         <p>{{ if $gimme->author->user->defined }}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p>
                                         <p class="debate_biography">{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
 
@@ -148,7 +148,7 @@
                     {{ include file="_tpl/article-comments.tpl" }}
 
                     {{ else }}
-                                <p>{{ #infoOnLockedArticles# }}</p>
+                                <p>{{'infoOnLockedArticles'|translate}}</p>
                     {{ /if }}
                   </div>
 

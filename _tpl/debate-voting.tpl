@@ -1,7 +1,7 @@
     {{ list_debates length="1" item="article" }}
 
           <div id="debate" class="clearfix score-box">
-              <h3>{{ #debateVoting# }}</h3>
+              <h3>{{'debateVoting'|translate}}</h3>
 
     {{ include file="_tpl/debate-votes-total.tpl" scope="parent" }}
 
@@ -15,7 +15,7 @@
     <div class="vote-box">
     <div class="button-group">
     {{ if $gimme->debate->is_votable }}
-    {{#Vote#}}
+    {{'Vote'|translate}}
     {{ debate_form template="article.tpl" submit_button=false }}
         {{ list_debate_answers order="bynumber asc" }}
 
@@ -33,9 +33,9 @@
 
     </div>
     </div>
-    {{ if $gimme->debate->is_votable }}<small>{{ #changeYourMind# }}</small>
-    {{ elseif $gimme->user->logged_in or !$gimme->debate->is_current }}<small>{{ #debateClosed# }}</small>
-    {{ elseif $gimme->debate->is_current && !$gimme->user->logged_in }}<small>{{ #pleaseLoginVote# }}</small>{{ /if }}
+    {{ if $gimme->debate->is_votable }}<small>{{'changeYourMind'|translate}}</small>
+    {{ elseif $gimme->user->logged_in or !$gimme->debate->is_current }}<small>{{'debateClosed'|translate}}</small>
+    {{ elseif $gimme->debate->is_current && !$gimme->user->logged_in }}<small>{{'pleaseLoginVote'|translate}}</small>{{ /if }}
 {{ /if }}
 
 </div>

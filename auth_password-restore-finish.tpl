@@ -5,7 +5,7 @@
   <div class="clearfix">
 
  <h3 class="normal_header">
- {{ #setNewPassword# }}
+ {{'setNewPassword'|translate}}
 </h3>
 
 <div class="register_form">
@@ -13,7 +13,7 @@
 	<fieldset>
         {{ if $form->isErrors() }}
         <div class="alert alert-error">
-         <p>{{ #couldNotChange# }}</p>
+         <p>{{'couldNotChange'|translate}}</p>
 
 
 
@@ -22,29 +22,29 @@
     </fieldset>
     <fieldset class="fixBackground background-block login">
         <dl>
-                {{ $form->password->setLabel("{{ #newPassword# }}")->removeDecorator('Errors') }}
+                {{ $form->password->setLabel("{{'newPassword'|translate}}")->removeDecorator('Errors') }}
                 {{ if $form->password->hasErrors() }}
                 <dt class="info-block">&nbsp;</dt>
                 <dd class="info-block">
-                  <span class="error-info">{{ #enterNewPassword# }}</span>
+                  <span class="error-info">{{'enterNewPassword'|translate}}</span>
 
 
                 </dd>
                 {{ /if }}
         </dl>
         <dl>
-                {{ $form->password_confirm->setLabel("{{ #retypePassword# }}")->removeDecorator('Errors') }}
+                {{ $form->password_confirm->setLabel("{{'retypePassword'|translate}}")->removeDecorator('Errors') }}
                 {{ if $form->password_confirm->hasErrors() && !$form->password->hasErrors() }}
                 <dt class="info-block">&nbsp;</dt>
                 <dd class="info-block">
-                	<span class="error-info">{{ #doesNotMatch# }}</span>
+                	<span class="error-info">{{'doesNotMatch'|translate}}</span>
                 </dd>
                 {{ /if }}
          </dl>
 
 
              <p class="overflow_hidden"><button type="submit" id="submit" class="purple_button ">
-                {{ #savePassword# }}
+                {{'savePassword'|translate}}
              </button></p>
 
 

@@ -1,9 +1,9 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
+
 <!-- Orange Box -->
 <div class="row">
 <div class="slider_box people_box hidden-phone span12">
 <div class="row">
-  <h3 class="EditorialCommentsText">{{#EditorialComments#}}</h3>
+  <h3 class="EditorialCommentsText">{{'EditorialComments'|translate}}</h3>
   <div class="people_wrapper span12">
 
     <!-- People / Row (12) -->

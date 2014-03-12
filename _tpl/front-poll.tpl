@@ -6,15 +6,15 @@
 {{ if $gimme->current_list->at_beginning }}
 
 <div id="polldiv" class="hidden-phone">
-    <h3>{{ #pollTitle# }}</h3>
+    <h3>{{'pollTitle'|translate}}</h3>
 {{ /if }}
 
 {{ if $gimme->debate_action->defined }}
                         <blockquote>{{ $gimme->debate->question }}</blockquote>
     {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user || $gimme->debate_action->ok }}
-    <p class="poll-info">{{ #thankYouPoll# }}</p>
+    <p class="poll-info">{{'thankYouPoll'|translate}}</p>
     {{ elseif $gimme->debate_action->is_error }}
-    <p>{{ #alreadyVoted# }}</p>
+    <p>{{'alreadyVoted'|translate}}</p>
     {{ /if }}
                         <ul class="question-list">
                         {{ assign var="votes" value=0 }}
@@ -25,7 +25,7 @@
                             </li>
                             {{ assign var="votes" value=$votes+$gimme->debateanswer->votes }}
                             {{ if $gimme->current_list->at_end }}
-                            <li class="total-votes"><span>{{ #numberOfVotes# }} {{ $votes }}</span></li>
+                            <li class="total-votes"><span>{{'numberOfVotes'|translate}} {{ $votes }}</span></li>
                             {{ /if }}
                         {{ /list_debate_answers }}
 
@@ -36,7 +36,7 @@
    {{ if $gimme->debate->is_votable }}
 
                         <blockquote>{{ $gimme->debate->question }}</blockquote>
-                        {{ debate_form template="_tpl/front-poll.tpl" submit_button="{{ #pollButton# }}" html_code="id=\"poll-button\" class=\"button\"" }}
+                        {{ debate_form template="_tpl/front-poll.tpl" submit_button="{{'pollButton'|translate}}" html_code="id=\"poll-button\" class=\"button\"" }}
 
 {{* this is to find out template id for this template, will have to be assigned as hidden form field *}}
 {{ $uriAry=explode("tpl=", {{ uri options="template _tpl/front-poll.tpl" }}, 2) }}
@@ -55,7 +55,7 @@
 
    {{ else }}
                         <blockquote>{{ $gimme->debate->question }}</blockquote>
-                        {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}<p class="poll-info">{{ #thankYouPoll# }}</p>{{ /if }}
+                        {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}<p class="poll-info">{{'thankYouPoll'|translate}}</p>{{ /if }}
                         <ul class="question-list">
                         {{ list_debate_answers }}
                           <li>
