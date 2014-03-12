@@ -1,4 +1,4 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
+
 {{ include file="_tpl/_html-head.tpl" }}
 
     {{ include file="_tpl/header.tpl" }}

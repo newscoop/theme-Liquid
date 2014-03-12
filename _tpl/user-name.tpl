@@ -2,6 +2,6 @@
 {{ if $user->is_active }}
     {{ $user->uname|escape }}
 {{ else }}
-    {{#inactiveUser#}}
+    {{'inactiveUser'|translate}}
 {{ /if }}
 {{ /strip }}

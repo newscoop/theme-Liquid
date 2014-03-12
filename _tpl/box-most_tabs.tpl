@@ -1,11 +1,11 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
+
 <!-- Blue Box / Row -->
 <div class="blue_box blue_box_posts tabs_box">
 
   <!-- Tabs Menu -->
   <ul class="tabs_menu">
-    <li ><a href="#tab_most_clicked">{{ #mostRead# }}</a></li>
-    <li><a href="#tab_most_commented">{{ #mostCommented# }}</a></li>
+    <li ><a href="#tab_most_clicked">{{'mostRead'|translate}}</a></li>
+    <li><a href="#tab_most_commented">{{'mostCommented'|translate}}</a></li>
 
 
   </ul>

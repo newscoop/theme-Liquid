@@ -1,4 +1,4 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
+
 {{ include file="_tpl/_html-head.tpl" }}
 
 
@@ -15,6 +15,7 @@
 
       <!-- Span (8) -->
       <div class="span8">
+
 
         {{list_playlist_articles id="1" length="3"}}
 
@@ -43,7 +44,7 @@
           &nbsp;-&nbsp;{{/if}}{{/list_article_authors}}{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i " }}</h6>
                       <h3 class="title"><a href="{{url options="article"}}">{{$gimme->article->title}}</a></h3>
                       {{ if !$gimme->article->content_accessible }}
-                      <span class="premium_label">{{#premium#}}</span>
+                      <span class="premium_label">{{'premium'|translate}}</span>
                       {{/if}}
                       <p>{{$gimme->article->deck|strip_tags|truncate:250:"...":false}}</p>
                   </div>
@@ -81,7 +82,7 @@
            &nbsp;-&nbsp;{{/if}}{{/list_article_authors}}{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
                        <h3 class="title"><a href="{{url options="article"}}">{{$gimme->article->title}}</a></h3>
                        {{ if !$gimme->article->content_accessible }}
-                       <span class="premium_label">{{#premium#}}</span>
+                       <span class="premium_label">{{'premium'|translate}}</span>
                        {{/if}}
                        <p>{{$gimme->article->deck|strip_tags|truncate:200:"...":false}}</p>
                    </div>
@@ -118,7 +119,7 @@
        &nbsp;-&nbsp;{{/if}}{{/list_article_authors}}{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
                    <h3 class="title"><a href="{{url options="article"}}">{{$gimme->article->title}}</a></h3>
                    {{ if !$gimme->article->content_accessible }}
-                   <span class="premium_label">{{#premium#}}</span>
+                   <span class="premium_label">{{'premium'|translate}}</span>
                    {{/if}}
                    <p>{{$gimme->article->deck|strip_tags|truncate:200:"...":false}}</p>
                </div>
@@ -144,7 +145,7 @@
 
 <a target="_blank" href="http://www.sourcefabric.org/" class="grey_ad hidden-phone"><img src="{{ url static_file='_img/ads/300x250.png' }}" alt="" /></a>
 
-{{* render file="_tpl/front-poll.tpl"  issue=off section=off cache=4400 *}}
+{{render file="_tpl/front-poll.tpl"  issue=off section=off cache=4400 }}
 </div>
 </div>
 <!-- End Row (12) -->

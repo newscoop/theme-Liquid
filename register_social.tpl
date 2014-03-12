@@ -9,13 +9,13 @@
 
 
 
- <h3 class="normal_header">{{ #hello# }} {{ $name }}</h3>
+ <h3 class="normal_header">{{'hello'|translate}} {{ $name }}</h3>
 
 
 
 
 
-<p>{{ #fillYourData# }}</p>
+<p>{{'fillYourData'|translate}}</p>
 
 
 

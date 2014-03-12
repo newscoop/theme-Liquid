@@ -33,7 +33,7 @@
 
 
         {{ if !$gimme->article->content_accessible }}
-          <p>{{ #infoOnLockedArticles# }}</p>
+          <p>{{'infoOnLockedArticles'|translate}}</p>
         {{ else }}
 
 
@@ -67,7 +67,7 @@
                           {{ if $gimme->current_list->at_beginning }}
 
                           {{ if $gimme->article->full_text->has_previous_subtitles }}
-                          <a href="{{ url options="previous_subtitle full_text" }}" class="arrow arrow_left" title="">{{#previous#}}
+                          <a href="{{ url options="previous_subtitle full_text" }}" class="arrow arrow_left" title="">{{'previous'|translate}}
                           </a>
 
 
@@ -84,7 +84,7 @@
                           </ul>
                         </div>
                         {{ if $gimme->article->full_text->has_next_subtitles }}
-                        <a href="{{ url options="next_subtitle full_text" }}" class="arrow arrow_right" title="">{{#next#}}</a>
+                        <a href="{{ url options="next_subtitle full_text" }}" class="arrow arrow_right" title="">{{'next'|translate}}</a>
                         {{ /if }}
                         {{ /if }}
                         {{ /list_subtitles }}
@@ -149,7 +149,7 @@
 
                        {{if $gimme->current_list->at_beginning}}
                        <div class="article_authors">
-                        <h3>{{#writtenBy#}}</h3>
+                        <h3>{{'writtenBy'|translate}}</h3>
                         {{/if}}
                         <div class="author_item row">
 
@@ -206,7 +206,7 @@
                   <div class="margin_top_20 article_side_attachments">
 
 
-                   <h3>{{#attachments#}}</h3>
+                   <h3>{{'attachments'|translate}}</h3>
                    {{ list_article_attachments }}
 
 
@@ -238,7 +238,7 @@
                        {{ else }}
 
 
-                      {{#download#}} <a href="{{ url options="articleattachment" }}" >{{ $gimme->attachment->file_name }} ({{ $gimme->attachment->size_kb }}kb)</a>
+                      {{'download'|translate}} <a href="{{ url options="articleattachment" }}" >{{ $gimme->attachment->file_name }} ({{ $gimme->attachment->size_kb }}kb)</a>
 
                        {{ /if }}
                      </div>
@@ -252,7 +252,7 @@
                      {{ list_related_articles }}
                      {{if $gimme->current_list->at_beginning}}
                      <div class="related_articles margin_top_20">
-                      <h3 >{{#relatedArticles#}}</h3>
+                      <h3 >{{'relatedArticles'|translate}}</h3>
                       <ul>
                         {{/if}}
                         <li><a href="{{url options="article"}}">{{$gimme->article->name}}</a></li>

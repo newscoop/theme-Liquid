@@ -3,17 +3,17 @@
 <!-- Titlebar -->
 <nav id="mobilemenu" class="visible-phone">
   <ul class="menu">
-    <li {{ if  $gimme->template->name|strstr:"front.tpl"  }} class="current" {{ /if }}><a href="http://{{ $gimme->publication->site }}/">{{ #home# }}</a></li>
+    <li {{ if  $gimme->template->name|strstr:"front.tpl"  }} class="current" {{ /if }}><a href="http://{{ $gimme->publication->site }}/">{{'home'|translate}}</a></li>
 
 
 
     {{ local }}
     {{ set_current_issue }}
     {{ list_sections }}
-    <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{ #viewAllPosts# }} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
+    <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{'viewAllPosts'|translate}} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
     {{ /list_sections }}
 
-    <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="Community index">{{ #community# }}</a></li>
+    <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="Community index">{{'community'|translate}}</a></li>
 
 
 
@@ -22,7 +22,7 @@
 <div class="mobile-search">
 
     {{ search_form template="search.tpl" submit_button="" }}
-    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{ #search# }}\"" }}
+    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{'search'|translate}}\"" }}
     {{ /search_form }}
 
 </div>
@@ -36,7 +36,7 @@
   <div class="search_area hidden-phone" >
 
     {{ search_form template="search.tpl" submit_button="" }}
-    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{ #Search# }}\"" }}
+    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{'viewAllPosts'|translate}}\"" }}
     {{ /search_form }}
 
 
@@ -48,19 +48,19 @@
   </span>
   {{dynamic}}
   {{ if !$gimme->user->logged_in }}
-  <a href="{{ $view->url(['controller' => 'register', 'action' => 'index'], 'default') }}" class="icon_link icon_padlock hidden-phone" id="registerButtonFront">{{ #Register# }}</a>
+  <a href="{{ $view->url(['controller' => 'register', 'action' => 'index'], 'default') }}" class="icon_link icon_padlock hidden-phone" id="registerButtonFront">{{'Register'|translate}}</a>
 
-  <a href="#" class="icon_link icon_key open_login_popup hidden-phone">{{ #Login# }}</a>
+  <a href="#" class="icon_link icon_key open_login_popup hidden-phone">{{'Login'|translate}}</a>
 
 <div class="logininfo" style="display:none">
-  <a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}" class="icon_link hidden-phone">{{ #myprofile# }}</a>
+  <a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}" class="icon_link hidden-phone">{{'myprofile'|translate}}</a>
 
-    <a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}" class="icon_link icon_key hidden-phone">{{ #logout# }}</a>
+    <a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}" class="icon_link icon_key hidden-phone">{{'logout'|translate}}</a>
 </div>
   {{else}}
-  <a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}" class="icon_link hidden-phone">{{ #myprofile# }}</a>
+  <a href="{{ $view->url(['controller' => 'dashboard', 'action' => 'index'], 'default') }}" class="icon_link hidden-phone">{{'myprofile'|translate}}</a>
 
-    <a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}" class="icon_link icon_key hidden-phone">{{ #logout# }}</a>
+    <a href="{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}" class="icon_link icon_key hidden-phone">{{'logout'|translate}}</a>
   {{/if}}
 
 
@@ -101,7 +101,7 @@
  <!-- Top Menu -->
  <nav id="top_menu" class="hidden-phone" >
   <ul class="menu">
-    <li {{ if  $gimme->template->name|strstr:"front.tpl"  }} class="current" {{ /if }}><a href="http://{{ $gimme->publication->site }}/">{{ #home# }}</a></li>
+    <li {{ if  $gimme->template->name|strstr:"front.tpl"  }} class="current" {{ /if }}><a href="http://{{ $gimme->publication->site }}/">{{'home'|translate}}</a></li>
 
 
 
@@ -111,7 +111,7 @@
     <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{ #viewAllPosts# }} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
     {{ /list_sections }}
 
-    <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="Community index">{{ #community# }}</a></li>
+    <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="{{'community'|translate}}">{{'community'|translate}}</a></li>
 
 
 

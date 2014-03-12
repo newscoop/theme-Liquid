@@ -1,14 +1,13 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
-{{ #mailHello# }}
+{{'mailHello'|translate}}
 
-{{ #mailAutomaticalMessage# }} {{ $gimme->publication->name }} ({{ $gimme->publication->site }})
+{{'mailAutomaticalMessage'|translate}} {{ $gimme->publication->name }} ({{ $gimme->publication->site }})
 
-{{ #mailPleaseConfirm# }}
+{{'mailPleaseConfirm'|translate}}
 
 http://{{ $publication }}{{ $view->url(['user' => $user, 'token' => $token], 'confirm-email') }}
 
-{{ #mailOtherwise# }}
+{{'mailOtherwise'|translate}}
 
-{{ #mailThanks# }}
+{{'mailThanks'|translate}}
 
-{{ $view->placeholder('subject')->set(sprintf("E-mail confirmation at %s", $site)) }}
+{{ $view->placeholder('subject')->set(sprintf("{{'emailConfirmationAt'|translate}} %s", $site)) }}

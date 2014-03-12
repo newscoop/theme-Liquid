@@ -10,17 +10,17 @@
 
 
 
-<h3 class="normal_header">{{ #registerYourself# }}</h3>
+<h3 class="normal_header">{{'registerYourself'|translate}}</h3>
 
 
 
-<h4>{{ #confirmationSent# }}</h4>
+<h4>{{'confirmationSent'|translate}}</h4>
 
 <div class="alert alert-info">
 
 
-	<p>{{ #followEmailSteps# }}</p>
-	<p>{{ #thanksForRegistering# }}</p>
+	<p>{{'followEmailSteps'|translate}}</p>
+	<p>{{'thanksForRegistering'|translate}}</p>
 
 
 
