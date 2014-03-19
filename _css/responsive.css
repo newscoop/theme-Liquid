@@ -19,6 +19,8 @@
 
 	#titlebar {
 		border-top: 3px solid #d74b4b;
+		margin: 0 -10px;
+
 	}
 
 	#top {
@@ -206,6 +208,7 @@
 	color:#fff;
 	max-height:0px;
 	overflow:hidden;
+	margin: 0 -10px;
 	transition: max-height 0.5s ease;
 	-webkit-transition: max-height 0.5s ease ; /* Safari */
 }

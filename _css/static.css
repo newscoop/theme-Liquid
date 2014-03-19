@@ -9,6 +9,10 @@
 
 }
 
+.wrap_menu_wrap{
+	height:65px;
+}
+
 .menu_wrap {
 	background: #fff;
 	width: 100%;
