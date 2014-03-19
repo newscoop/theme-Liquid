@@ -43,7 +43,7 @@
 
   </div>
   <span class="icon_link icon_lang open_lang_popup hidden-phone tooltip">
-    {{ #Language# }}
+    {{'Language'|translate}}
 
   </span>
   {{dynamic}}
@@ -95,7 +95,7 @@
 
 
 
-
+<div class="wrap_menu_wrap">
  <div class="menu_wrap">
    <div class="container">
  <!-- Top Menu -->
@@ -108,7 +108,7 @@
 
 
     {{ list_sections }}
-    <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{ #viewAllPosts# }} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
+    <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{'viewAllPosts'|translate}} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
     {{ /list_sections }}
 
     <li><a href="{{ $view->url(['controller' => 'user', 'action' => 'index'], 'default') }}" title="{{'community'|translate}}">{{'community'|translate}}</a></li>
@@ -124,4 +124,5 @@
 {{/local}}
 
   </div>
+</div>
 </div>
