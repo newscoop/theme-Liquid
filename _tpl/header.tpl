@@ -2,12 +2,13 @@
   <div class="container">
 <!-- Titlebar -->
 <nav id="mobilemenu" class="visible-phone">
-  <ul class="menu">
+  <ul class="menu" id="mobile_sections">
     <li {{ if  $gimme->template->name|strstr:"front.tpl"  }} class="current" {{ /if }}><a href="http://{{ $gimme->publication->site }}/">{{'home'|translate}}</a></li>
 
 
 
     {{ local }}
+    {{dynamic}}
     {{ set_current_issue }}
     {{ list_sections }}
     <li{{ if ($gimme->section->number == $gimme->default_section->number) }} class="current"{{ /if }}><a href="{{ url options="section" }}" title="{{'viewAllPosts'|translate}} {{ $gimme->section->name }}">{{ $gimme->section->name }}</a></li>
@@ -19,6 +20,15 @@
 
   </ul>
 
+  <ul class="menu" id="mobile_lang">
+    {{ list_languages of_publication="true" }}
+      <li {{ if $gimme->language == $gimme->default_language }} class="current"{{ /if }}><a href="{{ url }}" >{{ $gimme->language->name }}</a></li>
+    {{ /list_languages }}
+    <!-- Delete those below. It is just a sample -->
+    <li><a href="#">German</a></li>
+    <li><a href="#">Polish</a></li>
+  </ul>
+  {{/dynamic}}
 <div class="mobile-search">
 
     {{ search_form template="search.tpl" submit_button="" }}
@@ -42,11 +52,19 @@
 
 
   </div>
+  {{dynamic}}
   <span class="icon_link icon_lang open_lang_popup hidden-phone tooltip">
     {{'Language'|translate}}
-
+    <ul class="languages">
+      {{ list_languages of_publication="true" }}
+        <li><a href="{{ url }}" {{ if $gimme->language == $gimme->default_language }} class="active"{{ /if }}>{{ $gimme->language->name }}</a></li>
+      {{ /list_languages }}
+      <!-- Delete those below. It is just a sample -->
+      <li><a href="#">German</a></li>
+      <li><a href="#">Polish</a></li>
+    </ul>
   </span>
-  {{dynamic}}
+
   {{ if !$gimme->user->logged_in }}
   <a href="{{ $view->url(['controller' => 'register', 'action' => 'index'], 'default') }}" class="icon_link icon_padlock hidden-phone" id="registerButtonFront">{{'Register'|translate}}</a>
 
@@ -69,12 +87,16 @@
 
 
 
+
   <button class="navbar-toggle visible-phone" type="button" id="mobilemenuopen" >
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+
+        <span id="mobilelangopen" class="icon_link icon_lang mobile-lang visible-phone ">
+        </span>
 
 </header>
 <!-- End Titlebar -->
@@ -95,7 +117,7 @@
 
 
 
-<div class="wrap_menu_wrap">
+<div class="wrap_menu_wrap hidden-phone">
  <div class="menu_wrap">
    <div class="container">
  <!-- Top Menu -->
