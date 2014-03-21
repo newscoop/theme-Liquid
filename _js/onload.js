@@ -48,6 +48,18 @@ $(document).ready(function() {
     $("#mobilemenuopen").click(function (e){
         e.preventDefault();
 
+        $("#mobile_lang").css("display","none");
+        $("#mobile_sections").css("display","block");
+        var menu = $("#mobilemenu");
+        menu.hasClass('open') ? menu.removeClass('open') : menu.addClass('open');
+
+    });
+
+    $("#mobilelangopen").click(function (e){
+        e.preventDefault();
+
+        $("#mobile_lang").css("display","block");
+        $("#mobile_sections").css("display","none");
         var menu = $("#mobilemenu");
         menu.hasClass('open') ? menu.removeClass('open') : menu.addClass('open');
 

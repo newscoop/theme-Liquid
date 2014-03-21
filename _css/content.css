@@ -26,6 +26,29 @@
 .icon_link.icon_lang {
 	background-image: url(../_img/icons/lang.png);
 	padding-left: 24px;
+	position:relative;
+}
+
+.icon_lang .languages{
+	display: none;
+	position:absolute;
+	top:20px;
+	left:-10px;
+	background:#fff;
+	padding:10px 10px 5px 35px;
+
+	min-width:100px;
+}
+.icon_lang:hover .languages{
+	display:block;
+}
+.icon_lang .languages a{
+	color:inherit;
+	font-family: arial;
+}
+
+.icon_lang .languages a.active{
+	text-decoration: underline;
 }
 
 .content_text {

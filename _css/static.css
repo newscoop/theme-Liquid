@@ -73,6 +73,12 @@
 	padding-right: 10px;
 }
 
+#titlebar .mobile-lang{
+	padding-right: 16px;
+	margin-top: 4px;
+	cursor:pointer;
+}
+
 .icon_padlock,
 .icon_key
 {

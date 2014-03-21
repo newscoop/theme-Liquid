@@ -25,6 +25,7 @@
 
 	#top {
 		margin-bottom:10px;
+		clear: both;
 	}
 
 	#top .top_content {
@@ -224,6 +225,11 @@
 	padding:10px 10px;
 	text-transform:uppercase;
 	text-decoration: none;
+}
+
+#mobilemenu .menu li.current, #mobilemenu .menu li:hover{
+
+	background:#d74b4b;
 }
 
 
