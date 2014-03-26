@@ -1,5 +1,5 @@
 {{$user}}
-
+{{dynamic}}
 {{ if $user->isAuthor() }}
 
 {{ $escapedName=str_replace(" ", "\ ", $user->author->name) }}
@@ -77,17 +77,18 @@
            <li class="firstlast"><a href="?{{$list_id}}=0">1</a></li>
            <li class="firstlast">...</li>
            {{/if}}
-           {{section name=foo start=$firstToShow loop=$lastToShow}}
+           {{for $foo=$firstToShow to $lastToShow}}
 
-           {{if $smarty.section.foo.index-1==$currentPage}}
 
-           <li class="current"><a>{{ $smarty.section.foo.index }}</a></li>
+                 {{if $foo-1==$currentPage}}
 
-           {{else}}
-           <li><a href="?{{$list_id}}={{ ($smarty.section.foo.index-1)*5 }}{{if $gimme->topic->identifier}}&tpid={{$gimme->topic->identifier}}{{/if}}">
-             {{ $smarty.section.foo.index }} </a></li>
-             {{/if}}
-             {{/section}}
+                 <li class="current"><a>{{ $foo }}</a></li>
+
+                 {{else}}
+                 <li><a href="?{{$list_id}}={{ ($foo-1)*5 }}{{if $gimme->topic->identifier}}&tpid={{$gimme->topic->identifier}}{{/if}}">
+                   {{ $foo }} </a></li>
+                   {{/if}}
+             {{/for}}
 
              {{if $lastToShow-1<$allPages}}
              <li class="firstlast">...</li>
@@ -107,15 +108,6 @@
        </nav>
 
        {{ /if }}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -141,7 +133,7 @@
       {{ if $user->is_active }}
           <a href="{{ $view->url(['username' => $user->uname], 'user') }}">
           {{ strip }}
-              {{ include file="_tpl/user-image.tpl" size="small" inline user=$gimme->comment->user }}
+              {{ render file="_tpl/user-image.tpl" size="small" user=$gimme->comment->user }}
           {{ /strip }}
           </a>
       {{ /if }}
@@ -171,3 +163,4 @@
 
 
  {{ /if }}
+ {{/dynamic}}
