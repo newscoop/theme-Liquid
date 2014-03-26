@@ -46,7 +46,7 @@
   <div class="search_area hidden-phone" >
 
     {{ search_form template="search.tpl" submit_button="" }}
-    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{'viewAllPosts'|translate}}\"" }}
+    {{ camp_edit object="search" attribute="keywords" html_code="placeholder=\"{{'search'|translate}}\"" }}
     {{ /search_form }}
 
 

@@ -1,7 +1,7 @@
 {{extends file="layout.tpl"}}
 
 {{block content}}
-
+{{dynamic}}
 <div class="article_content bloger bloger_profile content_text">
   <div>
     {{if  $user->image(160, 200) }}
@@ -37,12 +37,12 @@
 
 
 
-{{$user}}
-{{ include file="_tpl/user-content.tpl"  user=$user}}
+
+{{ render file="_tpl/user-content.tpl"  user=$user nocache}}
 
 
 
-
+{{/dynamic}}
 
 
 {{/block}}
