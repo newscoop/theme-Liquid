@@ -72,7 +72,22 @@ $(function() {
           window.lapp.hideMoreButton();
         }
       }
-      return response.items;
+
+
+        var newList = _.filter(response.items,
+          function(obj){
+
+            if(obj.type != 'poll') return obj;
+
+          });
+
+
+
+        return newList;
+
+
+
+
 
 
     }

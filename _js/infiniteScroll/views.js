@@ -107,7 +107,7 @@ window.listView = Backbone.View.extend({
 
                 that.$el.masonry('reload');
                 progressJs().end();
-            };
+            }
 
             images.load(function() {
                 nimages--;

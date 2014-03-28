@@ -368,18 +368,20 @@ p.rating_error{
 	clear: both;
 	position: relative;
 	height: 4px;
-	margin: 5px 0;
+	margin: 6px 0;
 	background: #d74b4b;
+	min-width:25px;
 }
 
 .q-score small {
 	position: absolute;
 	top: -8px;
-	right: -35px;
+	right: 0px;
 	background: #fff;
-	width: 32px;
+	padding: 0 3px;
 	font-size: 12px;
 	color: #d74b4b;
+
 }
 
 .poll-info {
