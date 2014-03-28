@@ -4,18 +4,41 @@ $(function() {
   window.articleModel = Backbone.Model.extend({
 
     isHighlighted : function(){
+      try
+      {
+        if (this.get('fields').highlight=="1") return true;
+      }
+      catch(err)
+      {
+        return false;
+      }
 
-      if (this.get('fields').highlight=="1") return true;
 
       return false;
     },
+    getDeck : function (){
+      try
+      {
+        if (this.get('fields').deck) return this.get('fields').deck;
+      }
+      catch(err)
+      {
+        try
+        {
+          if (this.get('fields').teaser) return this.get('fields').teaser;
+        }catch(error){
+          return '';
+        }
 
+      }
+      return '';
+    },
     getRendition : function(name) {
       // to be updated in API
       var renditions = this.get('renditions');
       for (var i=0 ; i< renditions.length; i++){
         if(renditions[i].caption==name){
-          return renditions[i].link;
+          return decodeURIComponent(renditions[i].link);
         }
       }
       return false;
@@ -48,17 +71,17 @@ $(function() {
         }else{
           window.lapp.hideMoreButton();
         }
+      }
+      return response.items;
+
+
     }
-    return response.items;
-
-
-  }
 
 
 
 
 
-});
+  });
 
 
 
