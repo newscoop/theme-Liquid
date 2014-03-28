@@ -5,7 +5,7 @@
 {{ list_debates length="1" item="article" }}
 {{ if $gimme->current_list->at_beginning }}
 
-<div id="polldiv" class="hidden-phone">
+<div id="polldiv" class="hidden-phone margin_top_10">
     <h3>{{'pollTitle'|translate}}</h3>
 {{ /if }}
 

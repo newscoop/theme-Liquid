@@ -7,7 +7,7 @@
   <div>
     <ul>
 
-      {{ list_articles ignore_publication="true" ignore_issue="true" ignore_section="true" constraints="author is `$escapedName`"  order="ByPublishDate desc" length="5"  }}
+      {{ list_articles ignore_publication="true" ignore_issue="true" ignore_section="true" constraints="author is `$escapedName` type is news"  order="ByPublishDate desc" length="5"  }}
       <li class="news_item">
 	     {{ image rendition="section" }}
 	     <a href="{{url options="article"}}" class="thumbnail">

@@ -102,6 +102,13 @@ window.listView = Backbone.View.extend({
 
         var images = $('#masonry_container img.loading');
             var nimages = images.length;
+            if (!nimages){
+                $("div.new").fadeIn().removeClass("new");
+
+                that.$el.masonry('reload');
+                progressJs().end();
+            }
+
             images.load(function() {
                 nimages--;
                 $(this).removeClass("loading");

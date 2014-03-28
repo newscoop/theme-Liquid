@@ -6,18 +6,21 @@
      <article class="news_item">
 
      <% var rendition = false;
-     if (item.get('fields').highlight=="1"){
+     if (item.isHighlighted()){
         rendition = item.getRendition("front_big");
+
      }else{
       rendition = item.getRendition("front_small");
+
      }
-      rendition = decodeURIComponent(rendition) ;
+
       if(rendition){
+        console.log(rendition);
      %>
 
          <a href="<%= item.get('number') %>" class="thumbnail">
 
-            <img src="//<%= rendition %>"  alt="here should be a caption" class="loading" />
+            <img src="//<%= rendition %>"  alt="" class="loading" />
         </a>
 
         <% } %>
@@ -37,7 +40,7 @@
 
                     <h3 class="title"><a href="<%= item.get('number') %>"> <%= item.get('title') %></a></h3>
 
-                    <p> <%= item.get('fields').deck.replace(/^(.{200}[^\s]*).*/, "$1")  %></p>
+                    <p> <%= item.getDeck().replace(/^(.{200}[^\s]*).*/, "$1")  %></p>
                 </div>
 
 
