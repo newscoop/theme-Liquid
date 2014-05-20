@@ -319,6 +319,9 @@ h3.debate_headline{
 	color: #00b4ff;
 }
 
+.article_rating{
+	width:50%;
+}
 
 .rate_widget {
 	border: none;
