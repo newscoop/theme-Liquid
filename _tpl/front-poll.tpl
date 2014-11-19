@@ -1,5 +1,3 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" section="poll" }}
-
 {{ list_articles length="1" ignore_issue="true" ignore_section="true" constraints="type is poll" }}
 
 {{ list_debates length="1" item="article" }}

@@ -26,7 +26,7 @@
         <article class="news_item condensed">
           {{ image rendition="front_small" }}
           <a href="{{url options="article"}}" class="thumbnail">
-            {{ include file="_tpl/article_icons.tpl" }}
+
             <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
           </a>
           {{/image}}
@@ -60,7 +60,7 @@
           <article class="news_item condensed">
             {{ image rendition="front_small" }}
             <a href="{{url options="article"}}" class="thumbnail">
-              {{ include file="_tpl/article_icons.tpl" }}
+
               <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
             </a>
             {{/image}}
