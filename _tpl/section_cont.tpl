@@ -1,4 +1,4 @@
-{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
+
 
 <script type="text/template" id="item-template">
 
@@ -15,7 +15,7 @@
      }
 
       if(rendition){
-        console.log(rendition);
+
      %>
 
          <a href="<%= item.get('number') %>" class="thumbnail">
