@@ -14,6 +14,7 @@ Theme features include:
 - Liquid Layout adjusts according to number of articles on frontpage 
 - Integration of standard ad formats by default 
 - Special front page element: Editorial Comments Slider
+- Most read / most commented widget that shows post popular articles
 
 
 ![Liquid Theme Frontpage] (http://i.imgur.com/BNX34jd.png)
