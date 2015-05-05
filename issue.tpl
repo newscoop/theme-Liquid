@@ -18,7 +18,6 @@
   {{ image rendition="section" }}
     <a href="{{url options="article"}}" class="thumbnail">
       <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"   />
-      {{ include file="_tpl/article_icons.tpl" }}
     </a>
   {{/image}}
 
