@@ -16,7 +16,6 @@
           <a href="{{url options="article"}}" class="thumbnail">
 
            <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})"   class="small"/>
-           {{ include file="_tpl/article_icons.tpl" }}
          </a>
          {{/image}}
 
