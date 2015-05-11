@@ -24,9 +24,7 @@
     {{ list_languages of_publication="true" }}
       <li {{ if $gimme->language == $gimme->default_language }} class="current"{{ /if }}><a href="{{ url }}" >{{ $gimme->language->name }}</a></li>
     {{ /list_languages }}
-    <!-- Delete those below. It is just a sample -->
-    <li><a href="#">German</a></li>
-    <li><a href="#">Polish</a></li>
+
   </ul>
   {{/dynamic}}
 <div class="mobile-search">
@@ -53,17 +51,29 @@
 
   </div>
   {{dynamic}}
-  <span class="icon_link icon_lang open_lang_popup hidden-phone tooltip">
-    {{'Language'|translate}}
-    <ul class="languages">
-      {{ list_languages of_publication="true" }}
-        <li><a href="{{ url }}" {{ if $gimme->language == $gimme->default_language }} class="active"{{ /if }}>{{ $gimme->language->name }}</a></li>
-      {{ /list_languages }}
-      <!-- Delete those below. It is just a sample -->
-      <li><a href="#">German</a></li>
-      <li><a href="#">Polish</a></li>
-    </ul>
-  </span>
+
+  {{* check if there is more than one language *}}
+  {{$moreThanOneLang = false}}
+
+  {{ list_languages of_publication="true" }}
+  {{if $gimme->current_list->at_beginning && !$gimme->current_list->at_end}}
+    {{$moreThanOneLang = true}}
+  {{/if}}
+{{if $moreThanOneLang}}
+    {{if $gimme->current_list->at_beginning}}
+      <span class="icon_link icon_lang open_lang_popup hidden-phone tooltip">
+        {{'Language'|translate}}
+        <ul class="languages">
+    {{/if}}
+
+            <li><a href="{{ url }}" {{ if $gimme->language == $gimme->default_language }} class="active"{{ /if }}>{{ $gimme->language->name }}</a></li>
+
+    {{if $gimme->current_list->at_end}}
+        </ul>
+      </span>
+    {{/if}}
+  {{/if}}
+  {{ /list_languages }}
 
   {{ if !$gimme->user->logged_in }}
   <a href="{{ $view->url(['controller' => 'register', 'action' => 'index'], 'default') }}" class="icon_link icon_padlock hidden-phone" id="registerButtonFront">{{'Register'|translate}}</a>
@@ -94,10 +104,10 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-
+{{if $moreThanOneLang}}
         <span id="mobilelangopen" class="icon_link icon_lang mobile-lang visible-phone ">
         </span>
-
+{{/if}}
 </header>
 <!-- End Titlebar -->
 
