@@ -25,9 +25,12 @@
        <h6 class="info">{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
         <h2 class="title">{{$gimme->article->name}}</h2>
         <h6 class="topics">
-          {{ list_article_topics }}<a href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>{{ if $gimme->current_list->at_end }}</p>{{ else }}, {{ /if }}
-          {{ /list_article_topics }}
-
+          {{strip}}
+            {{ list_article_topics }}
+              <a href="/{{$gimme->default_language->code}}/topic/{{ $gimme->topic->id }}/{{ $gimme->topic->name }}">{{ $gimme->topic->name }}</a>
+              {{ if !$gimme->current_list->at_end }}, {{ /if }}
+            {{ /list_article_topics }}
+          {{/strip}}
         </h6>
         {{ include file="_tpl/_edit-article.tpl" }}
 
