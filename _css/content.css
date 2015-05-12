@@ -149,6 +149,33 @@ s{
 	text-decoration: line-through;
 }
 
+.cms-image{
+	margin: 10px 0;
+}
+.cms-image.middle{
+	margin:10px auto;
+}
+.cms-image.left{
+	float:left;
+	margin: 10px 15px 10px 0;
+}
+
+.cms-image.right{
+	float:right;
+	margin: 10px 0 10px 15px;
+}
+
+.cms-image figcaption{
+	display:block;
+	text-align: left;
+	padding: 6px 8px;
+	cursor: text;
+	background: #f5f5f5;
+	font-size: 1em;
+	overflow: hidden;
+	line-height: 1.4em;
+}
+
 .article_content .content_text p{
 	font-size: 1em;
 }
