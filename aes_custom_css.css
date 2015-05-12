@@ -1,0 +1,124 @@
+/*!
+ *
+ * AES custom stylesheet for Liquid. Copy this code to plugins->editor->Custom styles
+ * Adapt the look and feel of the article content in the AES
+ *
+ * Important! This only works with default set of fields defined in config
+ *
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext);
+/* Title */
+
+.authoring-environment .article-field.title {
+    font-size: 2em;
+    font-family: 'Oswald', Tahoma, Arial, sans-serif;
+    color: #475f77;
+    line-height: 1.2em;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+/* Deck */
+
+.authoring-environment .article-field.lede {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+
+
+    font-style: normal;
+
+    color: #333;
+    line-height: 140%;
+}
+
+
+/*  Body text - Normal */
+
+.authoring-environment .article-field.body {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+    /* body text size (normal) */
+
+    font-weight: 400;
+    /* Roboto: 300,400,500 or 700 */
+
+    font-style: normal;
+    /* normal, italic */
+
+    color: #606060;
+    line-height: 150%;
+
+}
+/* space between paragraphs */
+
+.authoring-environment .main-article-container p {
+    padding-bottom: 6px;
+}
+
+/* Headings in article body  */
+.authoring-environment .main-article-container h1,
+.authoring-environment .main-article-container h2,
+.authoring-environment .main-article-container h3,
+.authoring-environment .main-article-container h4,
+.authoring-environment .main-article-container h5 {
+    margin:0;
+    padding:0;
+}
+
+
+
+/* Heading 1 */
+
+.authoring-environment .main-article-container h1 {
+    font-size: 2.5em;
+      font-family: 'Oswald', Tahoma, Arial, sans-serif;
+      color: #00b4ff;
+      line-height: 1.2em;
+      padding-bottom: 10px;
+}
+/* Heading 2 */
+
+.authoring-environment .main-article-container h2 {
+   font-size: 2em;
+   font-family: 'Oswald', Tahoma, Arial, sans-serif;
+   color: #475f77;
+   line-height: 1.2em;
+   padding-bottom: 10px;
+   text-transform: uppercase;
+}
+/* Heading 3 */
+
+.authoring-environment .main-article-container h3 {
+    font-size: 1.5em;
+      font-family: 'Oswald', Tahoma, Arial, sans-serif;
+      line-height: 1.3em;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+}
+/* Heading 4 */
+
+.authoring-environment .main-article-container h4 {
+    ffont-size: 1.2em;
+  font-family: 'Oswald', Tahoma, Arial, sans-serif;
+}
+/* Heading 4 */
+
+.authoring-environment .main-article-container h5 {
+    font-size: 1em;
+      font-family: 'Oswald', Tahoma, Arial, sans-serif;
+      color: #00b4ff;
+      font-weight: 600;
+}
+
+/* blockquote */
+
+.authoring-environment .main-article-container blockquote {
+  border-left: 3px solid #00b4ff;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  font-size:1.2em;
+  font-weight:200;
+  font-style: italic;
+  quotes: "\201C""\201D""\2018""\2019";
+}
