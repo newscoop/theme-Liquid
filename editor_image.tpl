@@ -9,7 +9,12 @@
 
 
 {{ if $gimme->image->photographer|strip !== "" OR $gimme->image->description|strip !== "" }}
-  <figcaption>{{ $gimme->image->description }} {{ if $gimme->image->photographer|strip !== "" }}(Photo: {{ if $gimme->image->photographer_url }}<a style="display: inline" href="{{ $gimme->image->photographer_url }}">{{ $gimme->image->photographer }}</a>{{ else }}{{ $gimme->image->photographer }}{{ /if }}){{ /if }}
+  <figcaption>{{ $gimme->image->description }}
+    {{ if $gimme->image->photographer|strip !== "" }}
+    <span class="photographer">
+   &copy; {{ if $gimme->image->photographer_url }}<a style="display: inline" href="{{ $gimme->image->photographer_url }}">{{ $gimme->image->photographer }}</a>{{ else }}{{ $gimme->image->photographer }}{{ /if }}
+ </span>
+   {{ /if }}
   </figcaption>
 {{/if}}
 </figure>

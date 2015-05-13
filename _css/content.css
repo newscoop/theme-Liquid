@@ -171,9 +171,18 @@ s{
 	padding: 6px 8px;
 	cursor: text;
 	background: #f5f5f5;
-	font-size: 1em;
+	font-size: 0.8em;
 	overflow: hidden;
 	line-height: 1.4em;
+}
+
+.cms-image figcaption .photographer{
+	display:block;
+	font-family: Arial,Helvetica,sans-serif;
+  font-size: 12px;
+  color: #aaa;
+  margin-top:3px;
+
 }
 
 .article_content .content_text p{
@@ -288,6 +297,9 @@ s{
 	font-style: italic;
 }
 
+.content_text ul, .content_text ol{
+	margin-bottom: 10px;
+}
 .content_text > ul, .content_text > ul li{
 	list-style-type: disc;
 	margin-left:20px;
