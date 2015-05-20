@@ -1,13 +1,8 @@
-{{'mailHello'|translate}}
+Hello,
 
-{{'mailAutomaticalMessage'|translate}} {{ $gimme->publication->name }} ({{ $gimme->publication->site }})
+please confirm your e-mail address by clicking on the link below:
 
-{{'mailPleaseConfirm'|translate}}
+http://{{ $site }}{{ $view->url(['user' => $user->identifier, 'token' => $token], 'confirm-email') }}
 
-http://{{ $publication }}{{ $view->url(['user' => $user, 'token' => $token], 'confirm-email') }}
-
-{{'mailOtherwise'|translate}}
-
-{{'mailThanks'|translate}}
-
-{{ $view->placeholder('subject')->set(sprintf("{{'emailConfirmationAt'|translate}} %s", $site)) }}
+Thanks!
+{{ set_placeholder subject=sprintf("E-mail confirmation at %s", $site) }}
