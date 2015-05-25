@@ -34,6 +34,10 @@
         </h6>
         {{ include file="_tpl/_edit-article.tpl" }}
 
+        <div class="deck">
+          {{$gimme->article->deck}}
+        </div>
+
 
         {{ if !$gimme->article->content_accessible }}
           <p>{{'infoOnLockedArticles'|translate}}</p>
