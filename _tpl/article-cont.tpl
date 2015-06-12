@@ -10,16 +10,7 @@
       {{ assign var="showStuff" value=1 }}
       {{ /if }}
 
-      {{if $showStuff}}
-      {{ image rendition="article" }}
 
-      <div class="thumbnail content_text">
-
-       <img src="{{ $image->src }}"  alt="{{ $image->caption }} (photo: {{ $image->photographer }})" alt="" />
-       <h6 class="caption ">{{ $image->caption }}</h6>
-     </div>
-     {{/image}}
-     {{/if}}
 
      <div class="content content_text">
        <h6 class="info">{{ $gimme->article->publish_date|camp_date_format:"%d.%m.%Y, %H:%i" }}</h6>
