@@ -185,6 +185,20 @@ s{
 
 }
 
+.article_content .content_text .deck{
+	margin: 35px 0 10px 0;
+	font-family: 'oswald' Tahoma, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.6em;
+}
+
+.article_content .content_text .deck p{
+	font-family: 'oswald' Tahoma, Arial, sans-serif;
+	font-size: 1em;
+	line-height: 1.6em;
+
+}
+
 .article_content .content_text p{
 	font-size: 1em;
 }
@@ -192,6 +206,8 @@ s{
 .content_text.content_text_smaller p {
 	font-size: 0.75em;
 }
+
+
 
 
 .content_text.content_text_contrast,
