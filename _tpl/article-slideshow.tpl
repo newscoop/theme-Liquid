@@ -12,7 +12,7 @@ if(galleryLinksContainer===undefined){
 }
 </script>
 
-{{ assign var="i" value=0 }}
+{{$i=0 }}
 {{ foreach $gimme->article->slideshows as $slideshow name=slideshowlist }}
 
 <script>
@@ -145,6 +145,6 @@ galleryLinksOriginalContainer.push(galleryLinksOriginal);
 
 
 
-
+{{$i=$i+1}}
 
 {{ /foreach }}
