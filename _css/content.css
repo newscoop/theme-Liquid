@@ -513,6 +513,7 @@ li.registered {
 .image-slideshow, .blueimp-gallery{
 	width:100%;
 	position: relative;
+	clear:both;
 }
 
 .blue_box.blue_box_posts .tabs_menu li.current a:after {
