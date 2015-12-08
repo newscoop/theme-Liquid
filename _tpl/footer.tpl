@@ -24,7 +24,7 @@
             <li><a href="{{ uri options="article" }}" title="{{ $gimme->article->name }}">{{ $gimme->article->name }}</a></li>
             {{ /list_articles }}
             <li><a href="{{ uri options="template archive.tpl" }}">{{'archives'|translate}}</a></li>
-
+            <li><p><small>{{'copyrightMessage'|translate}} <a target="_blank" href="http://newscoop.sourcefabric.org/">Newscoop</a>. {{'designed'|translate}} <a target="_blank" href="http://www.sourcefabric.org/">Sourcefabric</a></small></p></li>
             {{/local}}
         </ul>
 

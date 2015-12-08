@@ -318,7 +318,11 @@ margin-right: 0px;
 	font-family: Tahoma, Arial, sans-serif;
 	font-size: 0.9em;
 }
-
+#footer #footer_menu_second li:last-child{
+	float:right;
+	color: #fff;
+	font-family: Tahoma, Arial, sans-serif;
+}
 
 
 
